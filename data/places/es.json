@@ -1,0 +1,126 @@
+[
+  {
+    "id": "es-madrid-kavovar",
+    "google_place_id": "ChIJaUWLOwAnQg0REYbYsTaQXBM",
+    "name": "Kavovar Madrid",
+    "type": "cafe",
+    "city": "Madrid",
+    "country": "es",
+    "address": "Pl. Luca de Tena, 11, Arganzuela, 28045 Madrid, España",
+    "lat": 40.4017113,
+    "lng": -3.6945119,
+    "socials": [
+        "https://www.instagram.com/kavovar.madrid/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/KAVOVAR/@40.4017113,-3.6945119,1117m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd4227003b8b4569:0x135c9036b1d88611!8m2!3d40.4017113!4d-3.6945119!16s%2Fg%2F11y6lplbsh?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-barcelona-korchma-rodyna",
+    "google_place_id": "ChIJ71vHsvmjpBIRbb11BDjVhac",
+    "name": "Korchma Rodyna",
+    "type": "restaurant",
+    "city": "Barcelona",
+    "country": "es",
+    "address": "C/ de Muntaner, 443-445, Sarrià-Sant Gervasi, 08021 Barcelona, España",
+    "lat": 41.4011039,
+    "lng": 2.1399797,
+    "socials": [
+      "https://www.facebook.com/korchma.rodyna/",
+      "https://www.instagram.com/korchma.rodyna/"
+    ],
+    "website": "https://www.rodyna.es/uk",
+    "google_maps_url": "https://www.google.com/maps/place/KORCHMA+RODYNA/@41.4011039,2.1399797,1100m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a4a3f9b2c75bef:0xa785d5380475bd6d!8m2!3d41.4011039!4d2.1399797!16s%2Fg%2F11k3d6qw41?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-sant-feliu-de-llobregat-comida-ucraniana",
+    "google_place_id": "ChIJGV24p4CbpBIRJnSJ9-qdMiE",
+    "name": "Comida Ucraniana",
+    "type": "restaurant",
+    "city": "Sant Feliu de Llobregat",
+    "country": "es",
+    "address": "Carrer Francesc Macià, 38, 08980 Sant Feliu de Llobregat, Barcelona, España",
+    "lat": 41.3843386,
+    "lng": 2.0477407,
+    "socials": [
+        "https://www.facebook.com/p/Comidaucranianasf-100083355392057/",
+        "https://www.instagram.com/comidaukranianasf/"
+    ],
+    "website": "https://www.comidaucraniana.es/",
+    "google_maps_url": "https://www.google.com/maps/place/Comida+Ucraniana/@41.3843386,2.0477407,1100m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a49b80a7b85d19:0x21329deaf7897426!8m2!3d41.3843346!4d2.0503156!16s%2Fg%2F11rpttglyn?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-valencia-casa-ucraniana",
+    "google_place_id": "ChIJq8_C-0tPYA0RgYIybN1fXBY",
+    "name": "CASA UCRANIANA Restaurante",
+    "type": "restaurant",
+    "city": "Valencia",
+    "country": "es",
+    "address": "Carrer de Padilla, 5, Ciutat Vella, 46001 Valencia, España",
+    "lat": 39.4699026,
+    "lng": -0.3792018,
+    "socials": [
+        "https://www.facebook.com/CasaUcranianaRestaurante/",
+        "https://www.instagram.com/casa.ucraniana.restaurante/"
+    ],
+    "website": "https://casa-ucraniana.es/",
+    "google_maps_url": "https://www.google.com/maps/place/CASA+UCRANIANA+Restaurante/@39.4699026,-0.3792018,1132m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd604f4bfbc2cfab:0x165c5fdd6c328281!8m2!3d39.4699026!4d-0.3792018!16s%2Fg%2F11hbn69jwh?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-alicante-xata",
+    "google_place_id": "ChIJN59PDQA5Yg0RVeYHX2c-iCw",
+    "name": "Restaurante Xata",
+    "type": "restaurant",
+    "city": "Alicante",
+    "country": "es",
+    "address": "Av. Artista Remigio Soler López, 9, 03540 Alicante, España",
+    "lat": 38.3835876,
+    "lng": -0.4145066,
+    "socials": [
+      "https://www.facebook.com/Restaurante.Xata/",
+      "https://www.instagram.com/restaurante.xata/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Xata/@38.3835876,-0.4145066,1149m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd6239000d4f9f37:0x2c883e675f07e655!8m2!3d38.3835876!4d-0.4145066!16s%2Fg%2F11vywkr52c?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-curtis-pasteleria-el-mundo",
+    "google_place_id": "ChIJj-6_qbRBLg0RiDqLo6mCAuk",
+    "name": "Pastelería El Mundo",
+    "type": "bakery",
+    "city": "Curtis",
+    "country": "es",
+    "address": "Av. Emilio Martínez Sánchez, 2, 15310 Curtis, A Coruña, España",
+    "lat": 43.1254223,
+    "lng": -8.1455759,
+    "socials": [
+        "https://www.instagram.com/elmundo_2025/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/pasteler%C3%ADa+El+Mundo/@43.1254223,-8.1455759,1070m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2e41b4a9bfee8f:0xe90282a9a38b3a88!8m2!3d43.1254223!4d-8.1455759!16s%2Fg%2F11xl3vymq3?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  },
+  {
+    "id": "es-benalmadena-prosvita",
+    "google_place_id": "ChIJaz5jDq39cg0ROHT6h-j6DGs",
+    "name": "Restaurante Prosvita",
+    "type": "restaurant",
+    "city": "Benalmádena",
+    "country": "es",
+    "address": "Av. Manuel Mena Palma, 11, 29630 Benalmádena, Málaga, España",
+    "lat": 36.5889849,
+    "lng": -4.5351053,
+    "socials": [
+        "https://www.facebook.com/prosvit70/",
+        "https://www.instagram.com/restaurante.prosvita/"
+    ],
+    "website": "https://prosvita.es/uk",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurante+Prosvita/@36.5889849,-4.5351053,1177m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd72fdad0e633e6b:0x6b0cfae887fa7438!8m2!3d36.5889849!4d-4.5351053!16s%2Fg%2F11h58zwj06?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-06-30"
+  }
+]
