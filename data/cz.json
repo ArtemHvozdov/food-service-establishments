@@ -1,0 +1,242 @@
+[
+  {
+    "id": "cz-praha-the-borsc",
+    "google_place_id": "ChIJ0XH3OS6VC0cR-MSBo3s_LTc",
+    "name": "The Boršč",
+    "type": "restaurant",
+    "city": "Praha",
+    "country": "cz",
+    "address": "Dukelských Hrdinů 10, 170 00 Praha 7-Holešovice, Česká republika",
+    "lat": 50.098465,
+    "lng": 14.433446,
+    "socials": [
+      "https://www.facebook.com/TheBorschPrague/",
+      "https://www.instagram.com/the___borsch/?hl=en"
+    ],
+    "website": "https://theborsch.cz/uk",
+    "google_maps_url": "https://www.google.com/maps/place/The+Bor%C5%A1%C4%8D/@50.098465,14.433446,3762m/data=!3m1!1e3!4m15!1m8!3m7!1s0x470b94c7babea689:0x57ccaab0ab46b29f!2zRHVrZWxza8O9Y2ggSHJkaW7FryAxMCwgMTcwIDAwIFByYWhhIDctSG9sZcWhb3ZpY2UsINCn0LXRhdC40Y8!3b1!8m2!3d50.0984655!4d14.4334462!16s%2Fg%2F11sjsfrbmr!3m5!1s0x470b952e39f771d1:0x372d3f7ba381c4f8!8m2!3d50.0984655!4d14.4334462!16s%2Fg%2F11x0g10p7t?hl=ru-RU&entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-praha-bistro-soloha",
+    "google_place_id": "ChIJjWZ9sayVC0cRypyfz90DtsQ",
+    "name": "Bistro Soloha",
+    "type": "bistro",
+    "city": "Praha",
+    "country": "cz",
+    "address": "J. Masaryka 36, 120 00 Praha 2-Vinohrady, Česká republika",
+    "lat": 50.07385,
+    "lng": 14.4314889,
+    "socials": [
+      "https://www.instagram.com/soloha_bistro/"
+    ],
+    "website": "https://soloha.uds.app/c",
+    "google_maps_url": "https://www.google.com/maps/place/Bistro+Soloha/@50.07385,14.4314889,3334m/data=!3m1!1e3!4m10!1m2!2m1!1sbistro+soloha+prague!3m6!1s0x470b95acb17d668d:0xc4b603ddcf9f9cca!8m2!3d50.0718449!4d14.4395247!15sChRiaXN0cm8gc29sb2hhIHByYWd1ZVoWIhRiaXN0cm8gc29sb2hhIHByYWd1ZZIBBmJpc3Ryb5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyczBNMWx0TVhwVk0wNUtaREJ3TlZOSVZuaFZSRTVVVjFod1psZHRZeEFC4AEA-gEFCMIBEDo!16s%2Fg%2F11vzph9zm8?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-praha-bistro-panska",
+    "google_place_id": "ChIJQ7OWaJCVC0cRpeDpSHLEjeo",
+    "name": "Bistro Panská (Soloha)",
+    "type": "bistro",
+    "city": "Praha",
+    "country": "cz",
+    "address": "Panská 1, 110 00 Praha 1-Nové Město, Česká republika",
+    "lat": 50.0850006,
+    "lng": 14.4265641,
+    "socials": [],
+    "website": "https://bistropanska.choiceqr.com/",
+    "google_maps_url": "https://www.google.com/maps/place/Bistro+Pansk%C3%A1/@50.0850006,14.4265641,17z/data=!3m1!4b1!4m6!3m5!1s0x470b95906896b343:0xea8dc47248e9e0a5!8m2!3d50.0850006!4d14.4265641!16s%2Fg%2F11tjs8tyth?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-praha-nashi",
+    "google_place_id": "ChIJrSkLLwCVC0cRkt02WbZeV2c",
+    "name": "NAШІ",
+    "type": "restaurant",
+    "city": "Praha",
+    "country": "cz",
+    "address": "Křižíkova 160/71, 186 00 Praha 8-Karlín, Česká republika",
+    "lat": 50.095799,
+    "lng": 14.4468279,
+    "socials": [
+        "https://www.instagram.com/nashi_restaurace/"
+    ],
+    "website": "https://nashi.cz/",
+    "google_maps_url": "https://www.google.com/maps/place/NA%C5%A0I+restaurace/@50.095799,14.4468279,15.35z/data=!4m12!1m2!2m1!1z0J3QkNCo0IYgcmVzdGF1cmFudCBwcmFndWU!3m8!1s0x470b95002f0b29ad:0x67575eb65936dd92!8m2!3d50.0926188!4d14.4510904!9m1!1b1!15sChrQndCQ0KjQhiByZXN0YXVyYW50IHByYWd1ZVocIhrQvdCw0YjRliByZXN0YXVyYW50IHByYWd1ZZIBCnJlc3RhdXJhbnSaASNDaFpEU1VoTk1HOW5TMFZKUTBGblRVUkJNWFZ1YVZOQkVBReABAPoBBQiiARAo!16s%2Fg%2F11wp5cqfs7?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-praha-dnister",
+    "google_place_id": "ChIJ1bfS1fWUC0cRVjCMcPnr7E4",
+    "name": "Dnister",
+    "type": "restaurant",
+    "city": "Praha",
+    "country": "cz",
+    "address": "Na Moráni 6, 128 00 Praha 2-Nové Město, Česká republika",
+    "lat": 50.0732496,
+    "lng": 14.4159963,
+    "socials": [
+        "https://www.instagram.com/restauracednister?utm_source=qr"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Dnister/@50.0732496,14.4159963,17z/data=!3m1!4b1!4m6!3m5!1s0x470b94f5d5d2b7d5:0x4eecebf9708c3056!8m2!3d50.0732496!4d14.4159963!16s%2Fg%2F11b6v4fk_x?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-brno-defiliada",
+    "google_place_id": "ChIJ-V2iUwCXEkcRy0fajnc1mZ4",
+    "name": "Defiliada",
+    "type": "restaurant",
+    "city": "Brno",
+    "country": "cz",
+    "address": "Libušina tř. 2, 623 00 Brno-Kohoutovice, Česká republika",
+    "lat": 49.1954462,
+    "lng": 16.5400605,
+    "socials": [
+        "https://www.facebook.com/people/Defiliada-Defiliada/61577147900521/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Defiliada/@49.1954462,16.5400605,17z/data=!4m16!1m9!3m8!1s0x4712970053a25df9:0x9e9935778eda47cb!2sDefiliada!8m2!3d49.1954462!4d16.5400605!9m1!1b1!16s%2Fg%2F11xh3dg65b!3m5!1s0x4712970053a25df9:0x9e9935778eda47cb!8m2!3d49.1954462!4d16.5400605!16s%2Fg%2F11xh3dg65b?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-olomouc-simple-dumpl",
+    "google_place_id": "ChIJ-7i0c-JPEkcRI-H-N5rHAk4",
+    "name": "Simple Dumpl",
+    "type": "bistro",
+    "city": "Olomouc",
+    "country": "cz",
+    "address": "Denisova 310/13, 779 00 Olomouc, Česká republika",
+    "lat": 49.5955804,
+    "lng": 17.2544667,
+    "socials": [
+        "https://www.facebook.com/p/Simple-Dumpl-100066411355254/",
+        "https://www.instagram.com/simple.dumpl/"
+    ],
+    "website": "https://simpledumpl.com/",
+    "google_maps_url": "https://www.google.com/maps/place/Simple+Dumpl/@49.5955804,17.2544667,17z/data=!4m16!1m9!3m8!1s0x47124fe273b4b8fb:0x4e02c79a37fee123!2sSimple+Dumpl!8m2!3d49.5955804!4d17.2544667!9m1!1b1!16s%2Fg%2F11kq7tc9lj!3m5!1s0x47124fe273b4b8fb:0x4e02c79a37fee123!8m2!3d49.5955804!4d17.2544667!16s%2Fg%2F11kq7tc9lj?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-vranov-nad-dyji-bud-laska",
+    "google_place_id": "ChIJlXKTVuytckcRV-NqHPIsFgg",
+    "name": "Buď Laska",
+    "type": "restaurant",
+    "city": "Vranov nad Dyjí",
+    "country": "cz",
+    "address": "8. května 92, 671 03 Vranov nad Dyjí, Česká republika",
+    "lat": 48.8964509,
+    "lng": 15.8127007,
+    "socials": [
+      "https://www.facebook.com/budlaskavranov/",
+      "https://www.instagram.com/budlaskavranov/"
+    ],
+    "website": "https://www.budlaska.eu/",
+    "google_maps_url": "https://www.google.com/maps/place/Bu%C4%8F+Laska/@48.8964509,15.8127007,17z/data=!4m16!1m9!3m8!1s0x4772adec56937295:0x8162cf21c6ae357!2sBu%C4%8F+Laska!8m2!3d48.8964509!4d15.8127007!9m1!1b1!16s%2Fg%2F11t27jyc5k!3m5!1s0x4772adec56937295:0x8162cf21c6ae357!8m2!3d48.8964509!4d15.8127007!16s%2Fg%2F11t27jyc5k?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-pardubice-berehynia",
+    "google_place_id": "ChIJ8xZwJwzNDUcRN0oMMp7l2IQ",
+    "name": "Berehynia Ukrajinská kuchyně",
+    "type": "restaurant",
+    "city": "Pardubice",
+    "country": "cz",
+    "address": "Náměstí Republiky 53, 530 02 Pardubice, Česká republika",
+    "lat": 50.0241904,
+    "lng": 15.7596832,
+    "socials": [
+        "https://www.facebook.com/bleriotpardubice/"
+    ],
+    "website": "https://bleriotpardubice.cz/",
+    "google_maps_url": "https://www.google.com/maps/place/Berehynia+Ukrajinsk%C3%A1+kuchyn%C4%9B/@50.0241904,15.7596832,17z/data=!4m16!1m9!3m8!1s0x470dcd0c277016f3:0x84d8e59e320c4a37!2sBerehynia+Ukrajinsk%C3%A1+kuchyn%C4%9B!8m2!3d50.0241904!4d15.7596832!9m1!1b1!16s%2Fg%2F11l5s392gk!3m5!1s0x470dcd0c277016f3:0x84d8e59e320c4a37!8m2!3d50.0241904!4d15.7596832!16s%2Fg%2F11l5s392gk?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-usti-nad-labem-zlate-karpaty",
+    "google_place_id": "ChIJ9-FtAGSbCUcRXKArU1DTi8g",
+    "name": "Restaurace Zlaté Karpaty",
+    "type": "restaurant",
+    "city": "Ústí nad Labem",
+    "country": "cz",
+    "address": "Hornická 2511/10a, 400 11 Ústí nad Labem-centrum, Česká republika",
+    "lat": 50.6715865,
+    "lng": 14.029694,
+    "socials": [
+        "https://www.facebook.com/p/Restaurace-Zlat%C3%A9-Karpaty-61574925617403/",
+        "https://www.instagram.com/zlate.karpaty/"
+    ],
+    "website": "https://zlatekarpaty.cz/",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurace+Zlat%C3%A9+Karpaty/@50.6715865,14.029694,17z/data=!4m16!1m9!3m8!1s0x47099b64006de1f7:0xc88bd350532ba05c!2sRestaurace+Zlat%C3%A9+Karpaty!8m2!3d50.6715865!4d14.029694!9m1!1b1!16s%2Fg%2F11wqh3lj_c!3m5!1s0x47099b64006de1f7:0xc88bd350532ba05c!8m2!3d50.6715865!4d14.029694!16s%2Fg%2F11wqh3lj_c?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-karlovy-vary-ukraina-restaurace",
+    "google_place_id": "ChIJjaQeTPaZoEcRuNwGFTtsYqY",
+    "name": "Ukrajna restaurace",
+    "type": "restaurant",
+    "city": "Karlovy Vary",
+    "country": "cz",
+    "address": "Západní 13, 360 01 Karlovy Vary, Česká republika",
+    "lat": 50.2294048,
+    "lng": 12.8638128,
+    "socials": [],
+    "website": "https://restauraceukrajina.cz/cs/",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurace+%22Ukrajina%22+Karlovy+Vary,+%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%22%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0%22+%D0%9A%D0%B0%D1%80%D0%BB%D0%BE%D0%B2%D1%8B+%D0%92%D0%B0%D1%80%D1%8B,+Restaurant+%22Ukraine%22+in+Karlsbad+-+ukrajinsk%C3%A1+restaurace/@50.2294048,12.8638128,17z/data=!3m1!4b1!4m6!3m5!1s0x47a099f64c1ea48d:0xa6626c3b1506dcb8!8m2!3d50.2294048!4d12.8638128!16s%2Fg%2F11nn3nkz_8?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-liberec-po-nashomu",
+    "google_place_id": "ChIJn5qnHAA3CUcRIpG1HKUsOj0",
+    "name": "Po-Nashomu",
+    "type": "restaurant",
+    "city": "Liberec",
+    "country": "cz",
+    "address": "Vaňurova 458/13, 460 07 Liberec, Česká republika",
+    "lat": 50.7642331,
+    "lng": 15.0472529,
+    "socials": [
+        "https://www.facebook.com/CleopatraLiberec",
+        "https://www.instagram.com/po_nashomu_/"
+    ],
+    "website": "https://po-nashomu.cz/",
+    "google_maps_url": "https://www.google.com/maps/place/Po-Nashomu/@50.7642331,15.0472529,17z/data=!3m1!4b1!4m6!3m5!1s0x470937001ca79a9f:0x3d3a2ca51cb59122!8m2!3d50.7642331!4d15.0472529!16s%2Fg%2F11n4tcdf73?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-jihlava-u-cimbora",
+    "google_place_id": "ChIJPyvwegAbDUcRz5jQdV57NHc",
+    "name": "Přátelské Bistro U Cimbora",
+    "type": "bistro",
+    "city": "Jihlava",
+    "country": "cz",
+    "address": "Březinova 4690/144, 586 01 Jihlava, Česká republika",
+    "lat": 49.4018175,
+    "lng": 15.6021138,
+    "socials": [
+        "https://www.facebook.com/people/P%C5%99%C3%A1telsk%C3%A9-Bistro-U-Cimbora/100079996854694/"
+    ],
+    "website": "https://ucimbora.cz/#",
+    "google_maps_url": "https://www.google.com/maps/place/P%C5%99%C3%A1telsk%C3%A9+Bistro+U+Cimbora/@49.4018175,15.6021138,17z/data=!3m1!4b1!4m6!3m5!1s0x470d1b007af02b3f:0x77347b5e75d098cf!8m2!3d49.4018175!4d15.6021138!16s%2Fg%2F11wwj46y3s?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  },
+  {
+    "id": "cz-mlada-boleslav-clock-cafe",
+    "google_place_id": "ChIJ63U-P01VCUcRPq4_w0xJkxc",
+    "name": "Clock Café",
+    "type": "cafe",
+    "city": "Mladá Boleslav",
+    "country": "cz",
+    "address": "Českobratrské nám. 57/3, 293 01 Mladá Boleslav, Česká republika",
+    "lat": 50.4140055,
+    "lng": 14.9048264,
+    "socials": [
+        "https://www.facebook.com/kavarnaclockcafe/",
+        "https://www.instagram.com/kavarnaclockcafe/"
+    ],
+    "website": "https://clockcafe.cz/",
+    "google_maps_url": "https://www.google.com/maps/place/CLOCK+CAF%C3%89/@50.4140055,14.9048264,17z/data=!3m1!4b1!4m6!3m5!1s0x4709554d3f3e75eb:0x1793494cc33fae3e!8m2!3d50.4140055!4d14.9048264!16s%2Fg%2F11lj13k5pw?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-01"
+  }
+]
