@@ -1,0 +1,72 @@
+[
+  {+
+    "id": "hu-budapest-ukran-udvar-rady",
+    "google_place_id": "ChIJ2UcFNHzdQUcRX9SZXlJkbqc",
+    "name": "Ukrán Udvar Étterem",
+    "type": "restaurant",
+    "city": "Budapest",
+    "country": "hu",
+    "address": "Budapest, Ráday u. 17, 1092 Magyarország",
+    "lat": 47.4865807,
+    "lng": 19.0636159,
+    "socials": [
+      "https://www.facebook.com/UkranUdvar",
+    ],
+    "website": "https://ukranudvar.hu//",
+    "google_maps_url": "https://www.google.com/maps/place/Ukr%C3%A1n+Udvar+%C3%89tterem/@47.4865807,19.0636159,17z/data=!3m1!4b1!4m6!3m5!1s0x4741dd7c340547d9:0xa76e64525e99d45f!8m2!3d47.4865807!4d19.0636159!16s%2Fg%2F11g0599g2b?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {+
+    "id": "hu-budapest-ukran-udvar-karoly",
+    "google_place_id": "ChIJN9nqnDHdQUcR0N8vVgX6nBc",
+    "name": "Ukrán Udvar Étterem Károly körút",
+    "type": "restaurant",
+    "city": "Budapest",
+    "country": "hu",
+    "address": "Budapest, Károly krt. 26, 1052 Magyarország",
+    "lat": 47.4960949,
+    "lng": 19.0575159,
+    "socials": [
+      "https://www.facebook.com/UkranUdvar/"
+    ],
+    "website": "https://ukranudvar.hu/",
+    "google_maps_url": "https://www.google.com/maps/place/Ukr%C3%A1n+Udvar+%C3%89tterem+K%C3%A1roly+k%C3%B6r%C3%BAt/@47.4960949,19.0575159,14z/data=!4m10!1m2!2m1!1zVWtyw6FuIFVkdmFyIMOJdHRlcmVtIEvDoXJvbHkga8O2csO6dCBidWRhcGVzdA!3m6!1s0x4741dd319cead937:0x179cfa05562fdfd0!8m2!3d47.4960949!4d19.0575159!15sCi5Va3LDoW4gVWR2YXIgw4l0dGVyZW0gS8Ohcm9seSBrw7Zyw7p0IGJ1ZGFwZXN0WjAiLnVrcsOhbiB1ZHZhciDDqXR0ZXJlbSBrw6Fyb2x5IGvDtnLDunQgYnVkYXBlc3SSARR1a3JhaW5pYW5fcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydE9UMlJIVGsxaVdFSkpUVWRGZVZnd2JHOWhWbFY0VFROd05FOUdSUkFC4AEA-gEFCJoBECs!16s%2Fg%2F11tnd1t77z?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {+
+    "id": "hu-budapest-mischenko-kitchen",
+    "google_place_id": "ChIJaVO4AUvdQUcRQ3eAIneY5XQ",
+    "name": "Mischenko Kitchen",
+    "type": "restaurant",
+    "city": "Budapest",
+    "country": "hu",
+    "address": "Budapest, Tompa u. 17/b, 1094 Magyarország",
+    "lat": 47.4818939,
+    "lng": 19.0717913,
+    "socials": [
+      "https://www.facebook.com/mischenko_kitchen-100091421747049/?locale=ru_RU",
+      "https://www.instagram.com/mischenko_kitchen/"
+    ],
+    "website": "https://mischenko-kitchen.choiceqr.com/uk/section:menu",
+    "google_maps_url": "https://www.google.com/maps/place/Mischenko+kitchen/@47.4818939,19.0717913,17z/data=!3m1!4b1!4m6!3m5!1s0x4741dd4b01b85369:0x74e5987722807743!8m2!3d47.4818939!4d19.0717913!16s%2Fg%2F11txrtg529?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {+
+    "id": "hu-budapest-svoi-bisztro",
+    "google_place_id": "ChIJ4ef34erdQUcR4s1ghWzE9lM",
+    "name": "SVOI bisztró",
+    "type": "bistro",
+    "city": "Budapest",
+    "country": "hu",
+    "address": "Budapest, Nádor u. 34, 1051 Magyarország",
+    "lat": 47.5049181,
+    "lng": 19.0479651,
+    "socials": [
+      "https://www.facebook.com/people/SVOI-bisztr%C3%B3/61568756008040/",
+      "https://www.instagram.com/svoi.bisztro/"
+    ],
+    "website": "https://svoi-bisztro.com/",
+    "google_maps_url": "https://www.google.com/maps/place/SVOI+bisztr%C3%B3/@47.5049181,19.0479651,17z/data=!4m16!1m9!3m8!1s0x4741ddeae1f7e7e1:0x53f6c46c8560cde2!2sSVOI+bisztr%C3%B3!8m2!3d47.5049181!4d19.0479651!9m1!1b1!16s%2Fg%2F11wn71bnr5!3m5!1s0x4741ddeae1f7e7e1:0x53f6c46c8560cde2!8m2!3d47.5049181!4d19.0479651!16s%2Fg%2F11wn71bnr5?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  }
+]
