@@ -1,0 +1,142 @@
+[
+  {
+    "id": "pt-lisboa-burjinelli",
+    "google_place_id": "ChIJySdirBIzGQ0RFZUfvf8OZXs",
+    "name": "Burjinelli",
+    "type": "restaurant",
+    "city": "Lisboa",
+    "country": "pt",
+    "address": "Av. Marquês de Tomar 33A, 1050-162 Lisboa, Portugal",
+    "lat": 38.7372048,
+    "lng": -9.1497539,
+    "socials": [
+      "https://www.facebook.com/ukrainian.restaurant.lisbon/",
+      "https://www.instagram.com/ukrainian_restaurant_lisbon/"
+    ],
+    "website": "https://www.burjinelli.com/",
+    "google_maps_url": "https://www.google.com/maps/place/Burjinelli/@38.7372048,-9.1497539,17z/data=!3m1!4b1!4m6!3m5!1s0xd193312ac6227c9:0x7b650effbd1f9515!8m2!3d38.7372048!4d-9.1497539!16s%2Fg%2F11ks0dnrrg?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-lisboa-akcentt",
+    "google_place_id": "ChIJK6M6alkzGQ0RGeFOsFIwyPc",
+    "name": "Akcentt / Ukrainian Cuisine",
+    "type": "bar",
+    "city": "Lisboa",
+    "country": "pt",
+    "address": "R. Barão de Sabrosa 16A, 1900-341 Lisboa, Portugal",
+    "lat": 38.7322139,
+    "lng": -9.1278919,
+    "socials": [
+      "https://www.facebook.com/akcenttUkrainianCuisine/",
+      "https://www.instagram.com/akcentt_ukrainian_cuisine/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Akcentt+%2F+Ukrainian+Cuisine/@38.7322139,-9.1278919,17z/data=!3m1!4b1!4m6!3m5!1s0xd1933596a3aa32b:0xf7c83052b04ee119!8m2!3d38.7322139!4d-9.1278919!16s%2Fg%2F11ll7ps3sh?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-pontinha-casa-ucraniana",
+    "google_place_id": "ChIJ4bmazU3NHg0ROePmPlESqB4",
+    "name": "Українська Хата / Casa Ucraniana",
+    "type": "restaurant",
+    "city": "Pontinha",
+    "country": "pt",
+    "address": "R. Fundação 2 rch, 1675-017 Pontinha, Portugal",
+    "lat": 38.7744223,
+    "lng": -9.2138012,
+    "socials": [
+        "https://www.facebook.com/p/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0-%D0%A5%D0%B0%D1%82%D0%B0Casa-Ucraniana-100067187796754/",
+        "https://www.instagram.com/mykolamelnychenko/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0+%D0%A5%D0%B0%D1%82%D0%B0%2FCasa+Ucraniana.pt/@38.7744223,-9.2138012,17z/data=!3m1!4b1!4m6!3m5!1s0xd1ecd4dcd9ab9e1:0x1ea812513ee6e339!8m2!3d38.7744223!4d-9.2138012!16s%2Fg%2F11smqtt2h6?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-lisboa-mushlya",
+    "google_place_id": "ChIJaR58QQAzGQ0R4zy-0V8Fdhw",
+    "name": "Mushlya - Oysters & Bubbles",
+    "type": "restaurant",
+    "city": "Lisboa",
+    "country": "pt",
+    "address": "R. Marquês de Ponte de Lima 16, 1100-588 Lisboa, Portugal",
+    "lat": 38.7157004,
+    "lng": -9.1338208,
+    "socials": [
+      "https://www.instagram.com/mushlya_lisbon/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Mushlya+-+Oysters+%26+Bubbles/@38.7157004,-9.1338208,17z/data=!4m16!1m9!3m8!1s0xd193300417c1e69:0x1c76055fd1be3ce3!2sMushlya+-+Oysters+%26+Bubbles!8m2!3d38.7157004!4d-9.1338208!9m1!1b1!16s%2Fg%2F11vr991g63!3m5!1s0xd193300417c1e69:0x1c76055fd1be3ce3!8m2!3d38.7157004!4d-9.1338208!16s%2Fg%2F11vr991g63?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-lisboa-capsule-neo-bistro",
+    "google_place_id": "ChIJZRs8bVg1GQ0RfXl1AYnVkOg",
+    "name": "The Capsule Neo-Bistro",
+    "type": "bistro",
+    "city": "Lisboa",
+    "country": "pt",
+    "address": "R. do Crucifixo 71, 1100-548 Lisboa, Portugal",
+    "lat": 38.7104308,
+    "lng": -9.1389163,
+    "socials": [
+      "https://www.instagram.com/theplate.bistro/"
+    ],
+    "website": "https://theplate-bistro.com/",
+    "google_maps_url": "https://www.google.com/maps/place/The+Capsule+Neo-Bistro/@38.7104308,-9.1389163,17z/data=!4m16!1m9!3m8!1s0xd1935586d3c1b65:0xe890d5890175797d!2sThe+Capsule+Neo-Bistro!8m2!3d38.7104308!4d-9.1389163!9m1!1b1!16s%2Fg%2F11vbztrcy4!3m5!1s0xd1935586d3c1b65:0xe890d5890175797d!8m2!3d38.7104308!4d-9.1389163!16s%2Fg%2F11vbztrcy4?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-cascais-nai",
+    "google_place_id": "ChIJG2P0IqjFHg0R5qud8l2j_So",
+    "name": "NAI",
+    "type": "restaurant",
+    "city": "Cascais",
+    "country": "pt",
+    "address": "Aldeamento Bloom Marinha, R. Palmeiras, 2750-005 Cascais, Portugal",
+    "lat": 38.7082942,
+    "lng": -9.4558425,
+    "socials": [
+      "https://www.instagram.com/nai.portugal"
+    ],
+    "website": "https://www.nai.restaurant/",
+    "google_maps_url": "https://www.google.com/maps/place/NAI/@38.7082942,-9.4558425,17z/data=!3m1!4b1!4m6!3m5!1s0xd1ec5a822f4631b:0x2afda35df29dabe6!8m2!3d38.7082942!4d-9.4558425!16s%2Fg%2F11njw91g21?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-coimbra-familia-restaurante",
+    "google_place_id": "ChIJS9QXXzj5Ig0R704QlJkAVAU",
+    "name": "Familia Restaurante",
+    "type": "restaurant",
+    "city": "Coimbra",
+    "country": "pt",
+    "address": "R. do Srg. Mor 29, 3000-382 Coimbra, Portugal",
+    "lat": 40.2076844,
+    "lng": -8.4298799,
+    "socials": [
+        "https://www.facebook.com/familia.coimbra.pt/",
+        "https://www.instagram.com/familia.coimbra.pt/"
+    ],
+    "website": "https://www.familia.rest/ua",
+    "google_maps_url": "https://www.google.com/maps/place/Familia+Restaurante/@40.2076844,-8.4298799,17z/data=!3m1!4b1!4m6!3m5!1s0xd22f9385f17d44b:0x554009994104eef!8m2!3d40.2076844!4d-8.4298799!16s%2Fg%2F11y83lzqn3?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "pt-lagos-restaurante-bar-inna",
+    "google_place_id": "ChIJlyu42c0xGw0R502mENS9NNY",
+    "name": "Restaurante Bar Inna",
+    "type": "restaurant",
+    "city": "Lagos",
+    "country": "pt",
+    "address": "R. da Oliveira 52, 8600-617 Lagos, Portugal",
+    "lat": 37.1010399,
+    "lng": -8.6739237,
+    "socials": [
+        "https://www.facebook.com/p/Restaurante-bar-inna-100064051504833/"
+    ],
+    "website": "https://restaurantebarinna.localo.site/",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurante+Bar+Inna/@37.1010399,-8.6739237,17z/data=!3m1!4b1!4m6!3m5!1s0xd1b31cdd9b82b97:0xd634bdd410a64de7!8m2!3d37.1010399!4d-8.6739237!16s%2Fg%2F11bc7ppzjd?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  }
+]
