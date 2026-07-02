@@ -1,5 +1,5 @@
 [
-  {+
+  {
     "id": "hu-budapest-ukran-udvar-rady",
     "google_place_id": "ChIJ2UcFNHzdQUcRX9SZXlJkbqc",
     "name": "Ukrán Udvar Étterem",
@@ -10,13 +10,13 @@
     "lat": 47.4865807,
     "lng": 19.0636159,
     "socials": [
-      "https://www.facebook.com/UkranUdvar",
+      "https://www.facebook.com/UkranUdvar"
     ],
     "website": "https://ukranudvar.hu//",
     "google_maps_url": "https://www.google.com/maps/place/Ukr%C3%A1n+Udvar+%C3%89tterem/@47.4865807,19.0636159,17z/data=!3m1!4b1!4m6!3m5!1s0x4741dd7c340547d9:0xa76e64525e99d45f!8m2!3d47.4865807!4d19.0636159!16s%2Fg%2F11g0599g2b?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     "verified_at": "2026-07-02"
   },
-  {+
+  {
     "id": "hu-budapest-ukran-udvar-karoly",
     "google_place_id": "ChIJN9nqnDHdQUcR0N8vVgX6nBc",
     "name": "Ukrán Udvar Étterem Károly körút",
@@ -33,7 +33,7 @@
     "google_maps_url": "https://www.google.com/maps/place/Ukr%C3%A1n+Udvar+%C3%89tterem+K%C3%A1roly+k%C3%B6r%C3%BAt/@47.4960949,19.0575159,14z/data=!4m10!1m2!2m1!1zVWtyw6FuIFVkdmFyIMOJdHRlcmVtIEvDoXJvbHkga8O2csO6dCBidWRhcGVzdA!3m6!1s0x4741dd319cead937:0x179cfa05562fdfd0!8m2!3d47.4960949!4d19.0575159!15sCi5Va3LDoW4gVWR2YXIgw4l0dGVyZW0gS8Ohcm9seSBrw7Zyw7p0IGJ1ZGFwZXN0WjAiLnVrcsOhbiB1ZHZhciDDqXR0ZXJlbSBrw6Fyb2x5IGvDtnLDunQgYnVkYXBlc3SSARR1a3JhaW5pYW5fcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydE9UMlJIVGsxaVdFSkpUVWRGZVZnd2JHOWhWbFY0VFROd05FOUdSUkFC4AEA-gEFCJoBECs!16s%2Fg%2F11tnd1t77z?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     "verified_at": "2026-07-02"
   },
-  {+
+  {
     "id": "hu-budapest-mischenko-kitchen",
     "google_place_id": "ChIJaVO4AUvdQUcRQ3eAIneY5XQ",
     "name": "Mischenko Kitchen",
@@ -51,7 +51,7 @@
     "google_maps_url": "https://www.google.com/maps/place/Mischenko+kitchen/@47.4818939,19.0717913,17z/data=!3m1!4b1!4m6!3m5!1s0x4741dd4b01b85369:0x74e5987722807743!8m2!3d47.4818939!4d19.0717913!16s%2Fg%2F11txrtg529?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     "verified_at": "2026-07-02"
   },
-  {+
+  {
     "id": "hu-budapest-svoi-bisztro",
     "google_place_id": "ChIJ4ef34erdQUcR4s1ghWzE9lM",
     "name": "SVOI bisztró",
