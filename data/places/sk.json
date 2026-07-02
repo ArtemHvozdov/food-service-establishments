@@ -1,0 +1,109 @@
+[
+  {
+    "id": "sk-bratislava-inside-restaurant",
+    "google_place_id": "ChIJNXJGdM-JbEcRyZ1R0SJcBFc",
+    "name": "Restaurant Inside",
+    "type": "restaurant",
+    "city": "Bratislava",
+    "country": "sk",
+    "address": "Jarabinková 6a, 821 09 Bratislava-Ružinov, Slovensko",
+    "lat": 48.1455071,
+    "lng": 17.1452641,
+    "socials": [
+      "https://www.facebook.com/p/Inside-Restaurant-100092854787350/",
+      "https://www.instagram.com/inside.rest/"
+    ],
+    "website": "https://inside.restaurant/uk",
+    "google_maps_url": "https://www.google.com/maps/place/Restaurant+Inside/@48.1455071,17.1452641,17z/data=!4m16!1m9!3m8!1s0x476c89cf74467235:0x57045c22d1519dc9!2sRestaurant+Inside!8m2!3d48.1455071!4d17.1452641!9m1!1b1!16s%2Fg%2F11twdmx1xc!3m5!1s0x476c89cf74467235:0x57045c22d1519dc9!8m2!3d48.1455071!4d17.1452641!16s%2Fg%2F11twdmx1xc?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "sk-bratislava-pelmeshki-varenichki",
+    "google_place_id": "ChIJtYobaoKJbEcR0m14sVO7sro",
+    "name": "Pelmeshki & Varenichki",
+    "type": "restaurant",
+    "city": "Bratislava",
+    "country": "sk",
+    "address": "Miletičova 592/71, 821 09 Bratislava, Slovensko",
+    "lat": 48.1475587,
+    "lng": 17.1416822,
+    "socials": [
+        "https://www.facebook.com/pelmeskitavarenicki/",
+        "https://www.instagram.com/pelmeni4ki/"
+    ],
+    "website": "https://buonmenu.com/pelmeshkivarenichki",
+    "google_maps_url": "https://www.google.com/maps/place/Pelmeshki+%26+Varenichki/@48.1475587,17.1416822,17z/data=!3m1!4b1!4m6!3m5!1s0x476c89826a1b8ab5:0xbab2bb53b1786dd2!8m2!3d48.1475587!4d17.1416822!16s%2Fg%2F11vm2wd54d?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "sk-bratislava-chernomorka-stare-mesto",
+    "google_place_id": "ChIJgWGgiaiJbEcREe3iVlPUSQI",
+    "name": "Chernomorka",
+    "type": "restaurant",
+    "city": "Bratislava",
+    "country": "sk",
+    "address": "Mýtna 48, 811 07 Bratislava-Staré Mesto, Slovensko",
+    "lat": 48.1566229,
+    "lng": 17.1191361,
+    "socials": [
+      "https://www.facebook.com/chernomorka.slovensko/",
+      "https://www.instagram.com/chernomorka.slovensko"
+    ],
+    "website": "https://chernomorka.sk/",
+    "google_maps_url": "https://www.google.com/maps/place/Chernomorka/@48.1566229,17.1191361,12z/data=!4m10!1m2!2m1!1sChernomorka+bratislava!3m6!1s0x476c89a889a06181:0x249d45356e2ed11!8m2!3d48.1566229!4d17.119136!15sChZDaGVybm9tb3JrYSBicmF0aXNsYXZhWhgiFmNoZXJub21vcmthIGJyYXRpc2xhdmGSARJzZWFmb29kX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F11l6m6klb3?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "sk-bratislava-chernomorka-petrzalka",
+    "google_place_id": "ChIJOd6RFACJbEcRJLyPmwPO9cs",
+    "name": "Chernomorka",
+    "type": "restaurant",
+    "city": "Bratislava",
+    "country": "sk",
+    "address": "Rusovská cesta 48, 851 01 Bratislava-Petržalka, Slovensko",
+    "lat": 48.1232866,
+    "lng": 17.1080684,
+    "socials": [
+      "https://www.facebook.com/chernomorka.slovensko/",
+      "https://www.instagram.com/chernomorka.slovensko"
+    ],
+    "website": "https://chernomorka.sk/",
+    "google_maps_url": "https://www.google.com/maps/place/Chernomorka/@48.1232866,17.1080684,17z/data=!3m1!4b1!4m6!3m5!1s0x476c89001491de39:0xcbf5ce039b8fbc24!8m2!3d48.1232866!4d17.1080684!16s%2Fg%2F11y4__q9hd?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "sk-bratislava-piana-vyshnia",
+    "google_place_id": "ChIJ1V5bD32JbEcR9zLuyOlpPGg",
+    "name": "Piana Vyshnia",
+    "type": "bar",
+    "city": "Bratislava",
+    "country": "sk",
+    "address": "Laurinská 136/7, 811 01 Bratislava, Slovensko",
+    "lat": 48.1434335,
+    "lng": 17.1102375,
+    "socials": [
+      "https://www.instagram.com/pianavyshnia.sk/"
+    ],
+    "website": "https://www.pianavyshnia.sk/",
+    "google_maps_url": "https://www.google.com/maps/place/Piana+Vyshnia+Bar/@48.1434335,17.1102375,17z/data=!3m1!4b1!4m6!3m5!1s0x476c897d0f5b5ed5:0x683c69e9c8ee32f7!8m2!3d48.1434335!4d17.1102375!16s%2Fg%2F11sv579z90?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "sk-kosice-smacno",
+    "google_place_id": "ChIJI_szPwDhPkcRHY6IjJNHeYw",
+    "name": "SMAČNO",
+    "type": "restaurant",
+    "city": "Košice",
+    "country": "sk",
+    "address": "Bočná 1, 040 01 Košice, Slovensko",
+    "lat": 48.7195079,
+    "lng": 21.2565920,
+    "socials": [
+      "https://www.facebook.com/people/Sma%C4%8Dno-Food-Ko%C5%A1ice/61552731698258/",
+      "https://www.instagram.com/smacno.kosice/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/SMA%C4%8CNO/@48.7195079,21.2565920,17z/data=!3m1!4b1!4m6!3m5!1s0x473ee1003f33fb23:0x8c7947938c888e1d!8m2!3d48.7195079!4d21.256592!16s%2Fg%2F11ldw2l_mx?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  }
+]
