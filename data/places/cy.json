@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cy-kouklia-eda-family-cafe",
+    "google_place_id": "ChIJCx00AMUb5xQRyeRe3o73ynQ",
+    "name": "Eda Family Cafe",
+    "type": "cafe",
+    "city": "Kouklia",
+    "country": "cy",
+    "address": "Kouklia 8500, Cyprus",
+    "lat": 34.7088816,
+    "lng": 32.5747878,
+    "socials": [
+        "https://www.facebook.com/people/EDA_family_cafe/100089954059264/",
+        "https://www.instagram.com/eda_family_cafe/"
+    ],
+    "website": null,
+    "google_maps_url": "https://www.google.com/maps/place/Eda+family+cafe/@34.7088816,32.5747878,17z/data=!3m1!4b1!4m6!3m5!1s0x14e71bc500341d0b:0x74caf78ede5ee4c9!8m2!3d34.7088816!4d32.5747878!16s%2Fg%2F11kjglygq_?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "cy-nicosia-berezka-store-cuisine",
+    "google_place_id": "ChIJJ0n9zVQX3hQR-OGYucJM4F0",
+    "name": "BEREZKA store & cuisine",
+    "type": "cafe",
+    "city": "Nicosia",
+    "country": "cy",
+    "address": "Platonos 1, Strovolos 2040, Nicosia, Cyprus",
+    "lat": 35.1388686,
+    "lng": 33.3418928,
+    "socials": [
+        "https://www.facebook.com/berezka.cy/",
+        "https://www.instagram.com/berezka.cy/"
+    ],
+    "website": "https://berezka.cy/en",
+    "google_maps_url": "https://www.google.com/maps/place/BEREZKA+store+%26+cuisine/@35.1388686,33.3418928,13z/data=!4m10!1m2!2m1!1sberezka+store+%26+cuisine+nicosia!3m6!1s0x14de1754cdfd4927:0x5de04cc2b998e1f8!8m2!3d35.1388686!4d33.3418928!15sCh9iZXJlemthIHN0b3JlICYgY3Vpc2luZSBuaWNvc2lhWiEiH2JlcmV6a2Egc3RvcmUgJiBjdWlzaW5lIG5pY29zaWGSAQ1tZWFsX3Rha2Vhd2F5mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJFYlU5UU5XWm5FQUXgAQD6AQQIJhBA!16s%2Fg%2F11stfbb1tv?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  },
+  {
+    "id": "cy-larnaca-berezka-store-cuisine",
+    "google_place_id": "ChIJ2Ts3De-D4BQRrCeJqfhBDLE",
+    "name": "Berezka store & cuisine",
+    "type": "cafe",
+    "city": "Larnaca",
+    "country": "cy",
+    "address": "Lordou Vyrona 35, Larnaka 6023, Cyprus",
+    "lat": 34.9162087,
+    "lng": 33.6349798,
+    "socials": [
+        "https://www.facebook.com/berezka.cy/",
+        "https://www.instagram.com/berezka.cy/"
+    ],
+    "website": "https://berezka.cy/en",
+    "google_maps_url": "https://www.google.com/maps/place/Berezka+store+%26+cuisine/@34.9162087,33.6349798,14z/data=!4m10!1m2!2m1!1sberezka+store+%26+cuisine+larnaca!3m6!1s0x14e083ef0d373bd9:0xb10c41f8a98927ac!8m2!3d34.9162087!4d33.6349798!15sCh9iZXJlemthIHN0b3JlICYgY3Vpc2luZSBsYXJuYWNhWiEiH2JlcmV6a2Egc3RvcmUgJiBjdWlzaW5lIGxhcm5hY2GSAQRkZWxpmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5vZFZCdVVGaDNFQUXgAQD6AQUIhgEQKg!16s%2Fg%2F11k4q4rqt5?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    "verified_at": "2026-07-02"
+  }
+]
