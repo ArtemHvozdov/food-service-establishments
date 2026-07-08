@@ -5,17 +5,23 @@ import (
 )
 
 func Places() []domain.CountryPlaceGroup {
+	krakow := domain.City{
+		Country: domain.Poland,
+		Alias:   "krakow",
+		Name:    "Краків",
+	}
+
 	return []domain.CountryPlaceGroup{
 		{
 			Country: domain.Poland,
 			Cities: []domain.CityPlaceGroup{
 				{
-					City: domain.Krakow,
+					City: krakow,
 					Places: []domain.Place{
 						{
 							Alias:           "",
 							PreviousAliases: nil,
-							City:            domain.Krakow,
+							City:            krakow,
 							Name:            "",
 							Address:         "",
 							Type:            domain.Restaurant,
