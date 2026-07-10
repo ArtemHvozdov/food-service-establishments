@@ -82,7 +82,14 @@ func groupPlaces(places []domain.Place) []domain.CountryPlaceGroup {
 				if cityPlaces[i].Name != cityPlaces[j].Name {
 					return cityPlaces[i].Name < cityPlaces[j].Name
 				}
-				return cityPlaces[i].Alias < cityPlaces[j].Alias
+				if cityPlaces[i].Alias != cityPlaces[j].Alias {
+					return cityPlaces[i].Alias < cityPlaces[j].Alias
+				}
+				// Фінальний тай-брейк по GooglePlaceID (непустий і унікальний
+				// для всіх заведень): порядок при повному збігу Name/Alias не
+				// має залежати від позиції запису у вхідному файлі, інакше
+				// призначення суфікса -2 "пливе" між білдами (internal_docs/task_01.md, 1.4.1).
+				return cityPlaces[i].GooglePlaceID < cityPlaces[j].GooglePlaceID
 			})
 			dedupeAliases(cityPlaces)
 
@@ -103,13 +110,33 @@ func groupPlaces(places []domain.Place) []domain.CountryPlaceGroup {
 
 // dedupeAliases додає детермінований суфікс -2, -3, ... до повторюваних
 // Place.Alias у межах уже відсортованого зрізу заведень одного міста.
+// `used` враховує і вихідні, і вже згенеровані alias, тому кандидат base-N
+// перевіряється на зайнятість перед призначенням — інакше можна випадково
+// зіткнутися з "натуральним" alias виду base-2, що вже є серед заведень
+// (internal_docs/task_01.md, 1.4.1).
 func dedupeAliases(places []domain.Place) {
+	used := make(map[string]bool, len(places))
+	for _, p := range places {
+		used[p.Alias] = true
+	}
+
 	seen := map[string]int{}
 	for i := range places {
 		base := places[i].Alias
 		seen[base]++
-		if seen[base] > 1 {
-			places[i].Alias = fmt.Sprintf("%s-%d", base, seen[base])
+		if seen[base] == 1 {
+			continue // перше входження лишається без суфікса
 		}
+
+		n := seen[base]
+		candidate := fmt.Sprintf("%s-%d", base, n)
+		for used[candidate] {
+			n++
+			candidate = fmt.Sprintf("%s-%d", base, n)
+		}
+
+		places[i].Alias = candidate
+		used[candidate] = true
+		seen[base] = n
 	}
 }
