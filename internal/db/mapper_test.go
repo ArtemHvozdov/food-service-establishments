@@ -90,3 +90,26 @@ func TestDtoToPlaceUnknownType(t *testing.T) {
 		t.Fatal("expected error for unknown place type, got nil")
 	}
 }
+
+// TestDtoToPlaceNoEmptyAliasAcrossRealData прогонює всі реальні заклади з
+// data/places/*.json через dtoToPlace і перевіряє, що жоден не дає порожній
+// Place.Alias (internal_docs/task_01.md, 1.3.1 — захист від битих URL).
+func TestDtoToPlaceNoEmptyAliasAcrossRealData(t *testing.T) {
+	dtos, err := loadPlaceDTOs()
+	if err != nil {
+		t.Fatalf("loadPlaceDTOs() error = %v", err)
+	}
+
+	for _, dto := range dtos {
+		place, err := dtoToPlace(dto)
+		if err != nil {
+			t.Fatalf("dtoToPlace(id=%q) error = %v", dto.ID, err)
+		}
+		if place.Alias == "" {
+			t.Errorf("dtoToPlace(id=%q) produced empty Place.Alias (name=%q)", dto.ID, dto.Name)
+		}
+		if place.City.Alias == "" {
+			t.Errorf("dtoToPlace(id=%q) produced empty City.Alias (city=%q)", dto.ID, dto.City)
+		}
+	}
+}

@@ -19,10 +19,14 @@ func dtoToPlace(dto placeDTO) (domain.Place, error) {
 	if strings.TrimSpace(dto.City) == "" {
 		return domain.Place{}, fmt.Errorf("db: empty city (place id=%q)", dto.ID)
 	}
+	cityAlias := slugify(dto.City)
+	if cityAlias == "" {
+		return domain.Place{}, fmt.Errorf("db: empty city alias for city %q (place id=%q)", dto.City, dto.ID)
+	}
 	city := domain.City{
 		Country: country,
 		Name:    dto.City,
-		Alias:   slugify(dto.City),
+		Alias:   cityAlias,
 	}
 
 	placeType, ok := placeTypeByString[dto.Type]
@@ -35,8 +39,13 @@ func dtoToPlace(dto placeDTO) (domain.Place, error) {
 		url = *dto.Website
 	}
 
+	placeAlias := slugify(dto.Name)
+	if placeAlias == "" {
+		return domain.Place{}, fmt.Errorf("db: empty place alias for name %q (place id=%q)", dto.Name, dto.ID)
+	}
+
 	place := domain.Place{
-		Alias:         slugify(dto.Name),
+		Alias:         placeAlias,
 		City:          city,
 		Name:          dto.Name,
 		Address:       dto.Address,

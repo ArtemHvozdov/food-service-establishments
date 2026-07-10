@@ -78,3 +78,22 @@ func TestSlugifyGolden(t *testing.T) {
 		}
 	}
 }
+
+// TestSlugifyCyrillicTransliteration — регрес на кириличні назви закладів,
+// які раніше давали порожній аліас (internal_docs/task_01.md, 1.3.1).
+func TestSlugifyCyrillicTransliteration(t *testing.T) {
+	cases := []struct {
+		name string
+		want string
+	}{
+		{"Ресторан ТРОЯНДА", "restoran-troianda"},
+		{"Файна Украина", "fayna-ukrayna"},
+		{"Бистро Портокал", "bystro-portokal"},
+	}
+
+	for _, tc := range cases {
+		if got := slugify(tc.name); got != tc.want {
+			t.Errorf("slugify(%q) = %q, want %q", tc.name, got, tc.want)
+		}
+	}
+}
