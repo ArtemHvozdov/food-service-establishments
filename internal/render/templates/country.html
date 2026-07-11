@@ -1,0 +1,8 @@
+{{define "content"}}
+<h1>Заклади у {{.Country.Name}}</h1>
+{{range .Cities}}<h2><a href="{{cityURL .City}}">{{.City.Name}}</a></h2>
+<ul>
+{{range .Places}}<li><a href="{{placeURL .}}">{{.Name}}</a></li>
+{{end}}</ul>
+{{end}}
+{{end}}

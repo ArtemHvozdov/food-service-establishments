@@ -1,0 +1,10 @@
+{{define "content"}}
+<h1>Каталог закладів української кухні за кордоном</h1>
+{{range .}}<h2><a href="{{countryURL .Country}}">{{.Country.Name}}</a></h2>
+{{range .Cities}}<h3><a href="{{cityURL .City}}">{{.City.Name}}</a></h3>
+<ul>
+{{range .Places}}<li><a href="{{placeURL .}}">{{.Name}}</a></li>
+{{end}}</ul>
+{{end}}
+{{end}}
+{{end}}

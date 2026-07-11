@@ -1,0 +1,14 @@
+{{define "layout"}}<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>{{pageTitle .}}</title>
+<meta name="description" content="{{pageDescription .}}">
+<link rel="canonical" href="{{canonicalOf .}}">
+<!-- TODO: підключити спільний CSS -->
+</head>
+<body>
+{{template "content" .}}
+</body>
+</html>
+{{end}}
