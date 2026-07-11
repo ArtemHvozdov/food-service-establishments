@@ -10,7 +10,10 @@ import (
 // TestPlacesGroupingCountsAndUniqueness перевіряє DoD 1.4: 11 країн, сумарно
 // 93 заклади, і жодних дублікатів Place.Alias у межах одного міста.
 func TestPlacesGroupingCountsAndUniqueness(t *testing.T) {
-	groups := Places()
+	groups, err := Places()
+	if err != nil {
+		t.Fatalf("Places() error = %v", err)
+	}
 
 	if got, want := len(groups), 11; got != want {
 		t.Errorf("len(groups) = %d, want %d", got, want)
@@ -38,8 +41,14 @@ func TestPlacesGroupingCountsAndUniqueness(t *testing.T) {
 // TestPlacesDeterministic перевіряє, що повторний виклик Places() дає
 // ідентичний порядок (DoD 1.4: детермінізм між білдами).
 func TestPlacesDeterministic(t *testing.T) {
-	first := Places()
-	second := Places()
+	first, err := Places()
+	if err != nil {
+		t.Fatalf("First Places() error = %v", err)
+	}
+	second, err := Places()
+	if err != nil {
+		t.Fatalf("Second Places() error = %v", err)
+	}
 
 	if !reflect.DeepEqual(first, second) {
 		t.Fatal("Places() is not deterministic across calls")

@@ -11,22 +11,20 @@ import (
 // і повертає їх згрупованими по країнах і містах (internal_docs/task_01.md, 1.4).
 // Помилки завантаження/мапінгу — це збій даних на етапі білда, тому панікуємо
 // (як mustDate), а не повертаємо error: сигнатура Places() лишається старою.
-func Places() []domain.CountryPlaceGroup {
+func Places() ([]domain.CountryPlaceGroup, error) {
 	dtos, err := loadPlaceDTOs()
 	if err != nil {
-		panic(err)
+		return nil, fmt.Errorf("db: завантаження даних: %w", err)
 	}
-
 	places := make([]domain.Place, 0, len(dtos))
 	for _, dto := range dtos {
 		place, err := dtoToPlace(dto)
 		if err != nil {
-			panic(err)
+			return nil, fmt.Errorf("db: мапінг заведення: %w", err)
 		}
 		places = append(places, place)
 	}
-
-	return groupPlaces(places)
+	return groupPlaces(places), nil
 }
 
 // cityKey — унікальний ключ міста в межах усього набору: alias міста сам по
