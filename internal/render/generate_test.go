@@ -12,11 +12,9 @@ import (
 )
 
 // generateForTest прогонить реальний конвейєр db.Places() -> Generate() у
-// відносну публічну директорію (publicDir), як це робитиме `make generate` з
-// кореня репозиторію (1.9), і прибирає за собою після тесту. Working
-// directory тестів пакета — сама директорія пакета, тому це не чіпає
-// справжній public/ у корені репозиторію.
-func generateForTest(t *testing.T) {
+// ізольовану тимчасову директорію (t.TempDir()), яку Go сам прибирає після
+// тесту. Не чіпає справжній public/ у корені репозиторію.
+func generateForTest(t *testing.T) string {
 	t.Helper()
 
 	groups, err := db.Places()
@@ -24,22 +22,21 @@ func generateForTest(t *testing.T) {
 		t.Fatalf("db.Places(): %v", err)
 	}
 
-	_ = os.RemoveAll(publicDir)
-	t.Cleanup(func() { os.RemoveAll(publicDir) })
-
-	if err := Generate(groups); err != nil {
+	dir := t.TempDir()
+	if err := Generate(groups, dir); err != nil {
 		t.Fatalf("Generate: %v", err)
 	}
+	return dir
 }
 
 // TestGenerateWritesFullTree перевіряє дерево public/ після Generate():
 // точну кількість файлів кожного рівня і приклади шляхів з DoD 1.8.
 func TestGenerateWritesFullTree(t *testing.T) {
-	generateForTest(t)
+	dir := generateForTest(t)
 
 	var indexCount, countryFlatCount, countryIndexCount, cityCount, placeCount, total int
 
-	err := filepath.WalkDir(publicDir, func(path string, d fs.DirEntry, err error) error {
+	err := filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -48,7 +45,7 @@ func TestGenerateWritesFullTree(t *testing.T) {
 		}
 		total++
 
-		rel, err := filepath.Rel(publicDir, path)
+		rel, err := filepath.Rel(dir, path)
 		if err != nil {
 			return err
 		}
@@ -98,16 +95,16 @@ func TestGenerateWritesFullTree(t *testing.T) {
 	}
 
 	for _, p := range []string{
-		filepath.Join(publicDir, "poland.html"),
-		filepath.Join(publicDir, "poland", "index.html"),
-		filepath.Join(publicDir, "poland", "krakow.html"),
+		filepath.Join(dir, "poland.html"),
+		filepath.Join(dir, "poland", "index.html"),
+		filepath.Join(dir, "poland", "krakow.html"),
 	} {
 		if _, err := os.Stat(p); err != nil {
 			t.Errorf("очікувався файл %s: %v", p, err)
 		}
 	}
 
-	placeEntries, err := os.ReadDir(filepath.Join(publicDir, "poland", "krakow"))
+	placeEntries, err := os.ReadDir(filepath.Join(dir, "poland", "krakow"))
 	if err != nil {
 		t.Fatalf("public/poland/krakow/: %v", err)
 	}
@@ -119,12 +116,12 @@ func TestGenerateWritesFullTree(t *testing.T) {
 // TestGenerateHasNoDeadLinks перевіряє, що кожен внутрішній href="/..."
 // у згенерованих сторінках веде на реально існуючий файл.
 func TestGenerateHasNoDeadLinks(t *testing.T) {
-	generateForTest(t)
+	dir := generateForTest(t)
 
 	hrefRe := regexp.MustCompile(`href="(/[^"]*)"`)
 	checked := 0
 
-	err := filepath.WalkDir(publicDir, func(path string, d fs.DirEntry, err error) error {
+	err := filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -139,7 +136,7 @@ func TestGenerateHasNoDeadLinks(t *testing.T) {
 
 		for _, m := range hrefRe.FindAllStringSubmatch(string(content), -1) {
 			href := m[1]
-			target := hrefToFilePath(href)
+			target := hrefToFilePath(dir, href)
 			if _, statErr := os.Stat(target); statErr != nil {
 				t.Errorf("%s: битий href %q -> %s: %v", path, href, target, statErr)
 			}
@@ -156,10 +153,10 @@ func TestGenerateHasNoDeadLinks(t *testing.T) {
 }
 
 // hrefToFilePath перетворює кореневий URL (як повертають хелпери 1.6) на
-// шлях файлу в публічній директорії.
-func hrefToFilePath(href string) string {
+// шлях файлу всередині вихідної директорії dir.
+func hrefToFilePath(dir, href string) string {
 	if href == "/" {
-		return filepath.Join(publicDir, "index.html")
+		return filepath.Join(dir, "index.html")
 	}
-	return filepath.Join(publicDir, filepath.FromSlash(strings.TrimPrefix(href, "/")))
+	return filepath.Join(dir, filepath.FromSlash(strings.TrimPrefix(href, "/")))
 }

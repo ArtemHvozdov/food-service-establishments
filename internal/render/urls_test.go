@@ -51,14 +51,14 @@ func TestPathsAndURLsAreConsistent(t *testing.T) {
 	city := place.City
 	country := city.Country
 
-	if got, want := IndexFilePath(), "public/index.html"; got != want {
+	if got, want := IndexFilePath("public"), "public/index.html"; got != want {
 		t.Errorf("IndexFilePath() = %q, want %q", got, want)
 	}
 	if got, want := IndexURL(), "/"; got != want {
 		t.Errorf("IndexURL() = %q, want %q", got, want)
 	}
 
-	flatFile, indexFile := CountryFilePaths(country)
+	flatFile, indexFile := CountryFilePaths("public", country)
 	if got, want := flatFile, "public/poland.html"; got != want {
 		t.Errorf("CountryFilePaths() flatFile = %q, want %q", got, want)
 	}
@@ -72,23 +72,23 @@ func TestPathsAndURLsAreConsistent(t *testing.T) {
 		t.Errorf("CountryURL() %q неузгоджений з плоским файлом %q", CountryURL(country), flatFile)
 	}
 
-	if got, want := CityFilePath(city), "public/poland/krakow.html"; got != want {
+	if got, want := CityFilePath("public", city), "public/poland/krakow.html"; got != want {
 		t.Errorf("CityFilePath() = %q, want %q", got, want)
 	}
 	if got, want := CityURL(city), "/poland/krakow.html"; got != want {
 		t.Errorf("CityURL() = %q, want %q", got, want)
 	}
-	if "public/"+strings.TrimPrefix(CityURL(city), "/") != CityFilePath(city) {
+	if "public/"+strings.TrimPrefix(CityURL(city), "/") != CityFilePath("public", city) {
 		t.Errorf("CityURL() неузгоджений з CityFilePath()")
 	}
 
-	if got, want := PlaceFilePath(place), "public/poland/krakow/borshch-krakow.html"; got != want {
+	if got, want := PlaceFilePath("public", place), "public/poland/krakow/borshch-krakow.html"; got != want {
 		t.Errorf("PlaceFilePath() = %q, want %q", got, want)
 	}
 	if got, want := PlaceURL(place), "/poland/krakow/borshch-krakow.html"; got != want {
 		t.Errorf("PlaceURL() = %q, want %q", got, want)
 	}
-	if "public/"+strings.TrimPrefix(PlaceURL(place), "/") != PlaceFilePath(place) {
+	if "public/"+strings.TrimPrefix(PlaceURL(place), "/") != PlaceFilePath("public", place) {
 		t.Errorf("PlaceURL() неузгоджений з PlaceFilePath()")
 	}
 }

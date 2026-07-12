@@ -11,17 +11,16 @@ import (
 )
 
 // Generate обходить []domain.CountryPlaceGroup (результат db.Places()) і
-// записує все дерево сторінок сайту: головну, сторінки країн (двома
-// копіями — internal_docs/task_01.md, 1.8), міст і заведень. Шляхи файлів
-// беруться з хелперів 1.6 (render.*FilePath), тому вихідна директорія
-// (public/) зафіксована там же.
-func Generate(groups []domain.CountryPlaceGroup) error {
-	if err := writePage(indexTemplate, groups, IndexFilePath()); err != nil {
+// записує все дерево сторінок сайту в outputDir: головну, сторінки країн
+// (двома копіями — internal_docs/task_01.md, 1.8), міст і заведень. Шляхи
+// файлів беруться з хелперів 1.6 (render.*FilePath).
+func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
+	if err := writePage(indexTemplate, groups, IndexFilePath(outputDir)); err != nil {
 		return err
 	}
 
 	for _, country := range groups {
-		flatFile, indexFile := CountryFilePaths(country.Country)
+		flatFile, indexFile := CountryFilePaths(outputDir, country.Country)
 		if err := writePage(countryTemplate, country, flatFile); err != nil {
 			return err
 		}
@@ -30,12 +29,12 @@ func Generate(groups []domain.CountryPlaceGroup) error {
 		}
 
 		for _, city := range country.Cities {
-			if err := writePage(cityTemplate, city, CityFilePath(city.City)); err != nil {
+			if err := writePage(cityTemplate, city, CityFilePath(outputDir, city.City)); err != nil {
 				return err
 			}
 
 			for _, place := range city.Places {
-				if err := writePage(placeTemplate, place, PlaceFilePath(place)); err != nil {
+				if err := writePage(placeTemplate, place, PlaceFilePath(outputDir, place)); err != nil {
 					return err
 				}
 			}
