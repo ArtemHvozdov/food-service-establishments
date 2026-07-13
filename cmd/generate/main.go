@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/ArtemHvozdov/food-service-establishments/internal/db"
+	"github.com/ArtemHvozdov/food-service-establishments/internal/render"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 		log.Fatalf("generate: валідація: %v", err)
 	}
 
-	fmt.Println(places)
-
-	// TODO: script to generate pages (1.6-1.8)
+	if err := render.Generate(places, "public"); err != nil {
+		log.Fatalf("generate: рендер: %v", err)
+	}
 }
