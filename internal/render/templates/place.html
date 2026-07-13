@@ -1,0 +1,10 @@
+{{define "content"}}
+<h1>{{.Name}}</h1>
+<p>{{.Address}}</p>
+<ul>
+{{if .URL}}<li><a href="{{.URL}}">Сайт</a></li>{{end}}
+{{if .FacebookURL}}<li><a href="{{.FacebookURL}}">Facebook</a></li>{{end}}
+{{if .InstagramURL}}<li><a href="{{.InstagramURL}}">Instagram</a></li>{{end}}
+{{if .GoogleMapsURL}}<li><a href="{{.GoogleMapsURL}}">Google Maps</a></li>{{end}}
+</ul>
+{{end}}

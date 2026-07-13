@@ -12,6 +12,22 @@ var (
 		Alias: "restaurant",
 		Name:  "Ресторан",
 	}
+	Cafe = PlaceType{
+		Alias: "cafe",
+		Name:  "Кафе",
+	}
+	Bistro = PlaceType{
+		Alias: "bistro",
+		Name:  "Бістро",
+	}
+	Bar = PlaceType{
+		Alias: "bar",
+		Name:  "Бар",
+	}
+	Bakery = PlaceType{
+		Alias: "bakery",
+		Name:  "Пекарня",
+	}
 )
 
 type Place struct {
@@ -25,6 +41,7 @@ type Place struct {
 	MenuURL         string
 	PhotoURL        string
 	InstagramURL    string
+	FacebookURL     string
 	GoogleMapsURL   string
 	GooglePlaceID   string
 	Location        Location
