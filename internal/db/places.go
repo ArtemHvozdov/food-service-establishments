@@ -114,6 +114,66 @@ func Places() []domain.CountryPlaceGroup {
 				},
 			},
 		},
+		{
+			Country: domain.Cyprus,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Czechia,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Germany,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Spain,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Hungary,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Poland,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Portugal,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Romania,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Slovakia,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
+		{
+			Country: domain.Turkiye,
+			Cities:  []domain.CityPlaceGroup{
+				// ...
+			},
+		},
 	}
 }
 
