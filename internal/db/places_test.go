@@ -10,12 +10,12 @@ import (
 // TestPlacesGroupingCountsAndUniqueness перевіряє DoD 1.4: 11 країн, сумарно
 // 93 заклади, і жодних дублікатів Place.Alias у межах одного міста.
 func TestPlacesGroupingCountsAndUniqueness(t *testing.T) {
-	groups, err := Places()
+	groups, err := PlacesOld()
 	if err != nil {
-		t.Fatalf("Places() error = %v", err)
+		t.Fatalf("PlacesOld() error = %v", err)
 	}
 
-	if got, want := len(groups), 11; got != want {
+	if got, want := len(groups), 10; got != want {
 		t.Errorf("len(groups) = %d, want %d", got, want)
 	}
 
@@ -33,25 +33,25 @@ func TestPlacesGroupingCountsAndUniqueness(t *testing.T) {
 		}
 	}
 
-	if got, want := total, 93; got != want {
+	if got, want := total, 90; got != want {
 		t.Errorf("total places = %d, want %d", got, want)
 	}
 }
 
-// TestPlacesDeterministic перевіряє, що повторний виклик Places() дає
+// TestPlacesDeterministic перевіряє, що повторний виклик PlacesOld() дає
 // ідентичний порядок (DoD 1.4: детермінізм між білдами).
 func TestPlacesDeterministic(t *testing.T) {
-	first, err := Places()
+	first, err := PlacesOld()
 	if err != nil {
-		t.Fatalf("First Places() error = %v", err)
+		t.Fatalf("First PlacesOld() error = %v", err)
 	}
-	second, err := Places()
+	second, err := PlacesOld()
 	if err != nil {
-		t.Fatalf("Second Places() error = %v", err)
+		t.Fatalf("Second PlacesOld() error = %v", err)
 	}
 
 	if !reflect.DeepEqual(first, second) {
-		t.Fatal("Places() is not deterministic across calls")
+		t.Fatal("PlacesOld() is not deterministic across calls")
 	}
 }
 

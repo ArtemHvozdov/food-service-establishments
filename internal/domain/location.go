@@ -64,3 +64,16 @@ var (
 		Name:  "Угорщина",
 	}
 )
+
+var (
+	BulgariaVarna = City{
+		Country: Bulgaria,
+		Alias:   "varna",
+		Name:    "Варна",
+	}
+	BulgariaSofia = City{
+		Country: Bulgaria,
+		Alias:   "sofia",
+		Name:    "Софія",
+	}
+)

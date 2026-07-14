@@ -7,11 +7,121 @@ import (
 	"github.com/ArtemHvozdov/food-service-establishments/internal/domain"
 )
 
-// Places завантажує сирі дані (1.2), мапить кожен запис у domain.Place (1.3)
+func Places() []domain.CountryPlaceGroup {
+	return []domain.CountryPlaceGroup{
+		{
+			Country: domain.Bulgaria,
+			Cities: []domain.CityPlaceGroup{
+				{
+					City: domain.BulgariaVarna,
+					Places: []domain.Place{
+						{
+							Alias:           "bg-varna-stefania-restaurant",
+							PreviousAliases: nil,
+							City:            domain.BulgariaVarna,
+							Name:            "Stefania Restaurant",
+							Address:         "бул. Княз Борис I 126, 9010 Варна, България",
+							Type:            domain.Restaurant,
+							URL:             "https://stefania.bg/bg/",
+							MenuURL:         "",
+							PhotoURL:        "",
+							InstagramURL:    "https://www.instagram.com/stefania_rest/?hl=bg/",
+							FacebookURL:     "",
+							GoogleMapsURL:   "https://www.google.com/maps/place/Restaurant+Stefania+DE/@52.5350217,13.6081279,17z/data=!3m1!4b1!4m6!3m5!1s0x47a84b00192cc3b5:0xc4b85b5d593e979a!8m2!3d52.5350217!4d13.6081279!16s%2Fg%2F11lmkc2wh9?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+							GooglePlaceID:   "ChIJb-6thO5VpEAR6upb0CSxOS4",
+							Location: domain.Location{
+								Latitude:  52.5350217,
+								Longitude: 13.6081279,
+							},
+							FoundingYear:  0,
+							Description:   "",
+							Dishes:        nil,
+							BorschPrice:   "",
+							LargePortions: false,
+							HasDelivery:   false,
+							DonatesToZSU:  nil,
+							Articles:      nil,
+							YoutubeVideos: nil,
+							AddedAt:       mustDate("2026-07-02"),
+							PromotedUntil: nil,
+						},
+					},
+				},
+				{
+					City: domain.BulgariaSofia,
+					Places: []domain.Place{
+						{
+							Alias:           "bg-sofia-faina-ukraina",
+							PreviousAliases: nil,
+							City:            domain.BulgariaSofia,
+							Name:            "Файна Украина",
+							Address:         "ул. Странджа 44, 1303 София, България",
+							Type:            domain.Restaurant,
+							URL:             "",
+							MenuURL:         "",
+							PhotoURL:        "",
+							InstagramURL:    "https://www.instagram.com/faina_ukraina_2026/",
+							FacebookURL:     "",
+							GoogleMapsURL:   "https://www.google.com/maps/place/%D0%A4%D0%B0%D0%B9%D0%BD%D0%B0+%D0%AE%D0%BA%D1%80%D0%B0%D0%B9%D0%BD%D0%B0/@42.6991315,23.3118459,17z/data=!3m1!4b1!4m6!3m5!1s0x40aa85bca639d98d:0x2a50d8f4492ee026!8m2!3d42.6991315!4d23.3118459!16s%2Fg%2F11z5641r8_?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+							GooglePlaceID:   "ChIJjdk5pryFqkARJuAuSfTYUCo",
+							Location: domain.Location{
+								Latitude:  42.6991315,
+								Longitude: 23.3118459,
+							},
+							FoundingYear:  0,
+							Description:   "",
+							Dishes:        nil,
+							BorschPrice:   "",
+							LargePortions: false,
+							HasDelivery:   false,
+							DonatesToZSU:  nil,
+							Articles:      nil,
+							YoutubeVideos: nil,
+							AddedAt:       mustDate("2026-07-02"),
+							PromotedUntil: nil,
+						},
+						{
+							Alias:           "bg-sofia-bistro-portokal",
+							PreviousAliases: nil,
+							City:            domain.BulgariaSofia,
+							Name:            "Бистро Портокал",
+							Address:         "кв. Банишора, ул. Опалченска 53, 1233 София, България",
+							Type:            domain.Bistro,
+							URL:             "",
+							MenuURL:         "",
+							PhotoURL:        "",
+							InstagramURL:    "",
+							FacebookURL:     "",
+							GoogleMapsURL:   "https://www.google.com/maps/place/%D0%91%D0%B8%D1%81%D1%82%D1%80%D0%B8+,,%D0%9F%D0%BE%D1%80%D1%82%D0%BE%D0%BA%D0%B0%D0%BB%E2%80%9D/@42.7105402,23.3145189,17z/data=!4m16!1m9!3m8!1s0x40aa8555f0abbba5:0x8badbd7ce286cb9a!2z0JHQuNGB0YLRgNC4ICws0J_QvtGA0YLQvtC60LDQu-KAnQ!8m2!3d42.7105402!4d23.3145189!9m1!1b1!16s%2Fg%2F11sj5839rz!3m5!1s0x40aa8555f0abbba5:0x8badbd7ce286cb9a!8m2!3d42.7105402!4d23.3145189!16s%2Fg%2F11sj5839rz?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+							GooglePlaceID:   "ChIJpbur8FWFqkARmsuG4ny9rYs",
+							Location: domain.Location{
+								Latitude:  42.7105402,
+								Longitude: 23.3145189,
+							},
+							FoundingYear:  0,
+							Description:   "",
+							Dishes:        nil,
+							BorschPrice:   "",
+							LargePortions: false,
+							HasDelivery:   false,
+							DonatesToZSU:  nil,
+							Articles:      nil,
+							YoutubeVideos: nil,
+							AddedAt:       mustDate("2026-07-02"),
+							PromotedUntil: nil,
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+// PlacesOld завантажує сирі дані (1.2), мапить кожен запис у domain.Place (1.3)
 // і повертає їх згрупованими по країнах і містах (internal_docs/task_01.md, 1.4).
 // Помилки завантаження/мапінгу — це збій даних на етапі білда, тому панікуємо
-// (як mustDate), а не повертаємо error: сигнатура Places() лишається старою.
-func Places() ([]domain.CountryPlaceGroup, error) {
+// (як mustDate), а не повертаємо error: сигнатура PlacesOld() лишається старою.
+func PlacesOld() ([]domain.CountryPlaceGroup, error) {
 	dtos, err := loadPlaceDTOs()
 	if err != nil {
 		return nil, fmt.Errorf("db: завантаження даних: %w", err)
