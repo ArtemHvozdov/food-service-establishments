@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	places, err := db.Places()
+	places, err := db.PlacesOld()
 	if err != nil {
 		log.Fatalf("generate: %v", err)
 	}

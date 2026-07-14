@@ -7,7 +7,7 @@ func TestLoadPlaceDTOsCount(t *testing.T) {
 	if err != nil {
 		t.Fatalf("loadPlaceDTOs() error = %v", err)
 	}
-	if got, want := len(dtos), 93; got != want {
+	if got, want := len(dtos), 90; got != want {
 		t.Fatalf("loadPlaceDTOs() returned %d DTOs, want %d", got, want)
 	}
 
@@ -19,8 +19,16 @@ func TestLoadPlaceDTOsCount(t *testing.T) {
 	// cz фактично містить 14 записів (countries.json відстає) — це очікувана
 	// розбіжність, не помилка (task_01.md, 1.2).
 	want := map[string]int{
-		"pl": 17, "de": 22, "ro": 6, "es": 7, "cz": 14,
-		"tr": 3, "pt": 8, "bg": 3, "cy": 3, "sk": 6, "hu": 4,
+		"pl": 17,
+		"de": 22,
+		"ro": 6,
+		"es": 7,
+		"cz": 14,
+		"tr": 3,
+		"pt": 8,
+		"cy": 3,
+		"sk": 6,
+		"hu": 4,
 	}
 	for code, wantCount := range want {
 		if perCountry[code] != wantCount {

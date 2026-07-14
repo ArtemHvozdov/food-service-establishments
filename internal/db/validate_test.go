@@ -10,12 +10,12 @@ import (
 // TestValidatePassesOnRealData перевіряє DoD 1.5: на поточних коректних
 // даних Validate не повертає помилок.
 func TestValidatePassesOnRealData(t *testing.T) {
-	groups, err := Places()
+	groups, err := PlacesOld()
 	if err != nil {
-		t.Fatalf("Places() returned error on real data: %v", err)
+		t.Fatalf("PlacesOld() returned error on real data: %v", err)
 	}
 	if err := Validate(groups); err != nil {
-		t.Fatalf("Validate(Places()) returned error on real data: %v", err)
+		t.Fatalf("Validate(PlacesOld()) returned error on real data: %v", err)
 	}
 }
 

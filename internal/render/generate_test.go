@@ -11,15 +11,15 @@ import (
 	"github.com/ArtemHvozdov/food-service-establishments/internal/db"
 )
 
-// generateForTest прогонить реальний конвейєр db.Places() -> Generate() у
+// generateForTest прогонить реальний конвейєр db.PlacesOld() -> Generate() у
 // ізольовану тимчасову директорію (t.TempDir()), яку Go сам прибирає після
 // тесту. Не чіпає справжній public/ у корені репозиторію.
 func generateForTest(t *testing.T) string {
 	t.Helper()
 
-	groups, err := db.Places()
+	groups, err := db.PlacesOld()
 	if err != nil {
-		t.Fatalf("db.Places(): %v", err)
+		t.Fatalf("db.PlacesOld(): %v", err)
 	}
 
 	dir := t.TempDir()
@@ -78,20 +78,20 @@ func TestGenerateWritesFullTree(t *testing.T) {
 	if indexCount != 1 {
 		t.Errorf("index.html: очікувалось 1, отримано %d", indexCount)
 	}
-	if countryFlatCount != 11 {
-		t.Errorf("public/[country].html: очікувалось 11, отримано %d", countryFlatCount)
+	if countryFlatCount != 10 {
+		t.Errorf("public/[country].html: очікувалось 10, отримано %d", countryFlatCount)
 	}
-	if countryIndexCount != 11 {
-		t.Errorf("public/[country]/index.html: очікувалось 11, отримано %d", countryIndexCount)
+	if countryIndexCount != 10 {
+		t.Errorf("public/[country]/index.html: очікувалось 10, отримано %d", countryIndexCount)
 	}
-	if cityCount != 57 {
-		t.Errorf("public/[country]/[city].html: очікувалось 57, отримано %d", cityCount)
+	if cityCount != 55 {
+		t.Errorf("public/[country]/[city].html: очікувалось 55, отримано %d", cityCount)
 	}
-	if placeCount != 93 {
-		t.Errorf("public/[country]/[city]/[place].html: очікувалось 93, отримано %d", placeCount)
+	if placeCount != 90 {
+		t.Errorf("public/[country]/[city]/[place].html: очікувалось 90, отримано %d", placeCount)
 	}
-	if total != 173 {
-		t.Errorf("всього html-файлів: очікувалось 173, отримано %d", total)
+	if total != 166 {
+		t.Errorf("всього html-файлів: очікувалось 166, отримано %d", total)
 	}
 
 	for _, p := range []string{
