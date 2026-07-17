@@ -76,4 +76,19 @@ var (
 		Alias:   "sofia",
 		Name:    "Софія",
 	}
+	CyprusKouklia = City{
+		Country: Cyprus,
+		Alias:   "kouklia",
+		Name:    "Куклія",
+	}
+	CyprusLarnaca = City{
+		Country: Cyprus,
+		Alias:   "larnaca",
+		Name:    "Ларнака",
+	}
+	CyprusNicosia = City{
+		Country: Cyprus,
+		Alias:   "nicosia",
+		Name:    "Нікосія",
+	}
 )
