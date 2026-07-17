@@ -91,4 +91,54 @@ var (
 		Alias:   "nicosia",
 		Name:    "Нікосія",
 	}
+	CzechiaBrno = City{
+		Country: Czechia,
+		Alias:   "brno",
+		Name:    "Брно",
+	}
+	CzechiaJihlava = City{
+		Country: Czechia,
+		Alias:   "jihlava",
+		Name:    "Їглава",
+	}
+	CzechiaKarlovyVary = City{
+		Country: Czechia,
+		Alias:   "karlovy-vary",
+		Name:    "Карлові Вари",
+	}
+	CzechiaLiberec = City{
+		Country: Czechia,
+		Alias:   "liberec",
+		Name:    "Ліберец",
+	}
+	CzechiaMladaBoleslav = City{
+		Country: Czechia,
+		Alias:   "mlada-boleslav",
+		Name:    "Млада-Болеслав",
+	}
+	CzechiaOlomouc = City{
+		Country: Czechia,
+		Alias:   "olomouc",
+		Name:    "Оломоуц",
+	}
+	CzechiaPardubice = City{
+		Country: Czechia,
+		Alias:   "pardubice",
+		Name:    "Пардубице",
+	}
+	CzechiaPraha = City{
+		Country: Czechia,
+		Alias:   "praha",
+		Name:    "Прага",
+	}
+	CzechiaVranovNadDyji = City{
+		Country: Czechia,
+		Alias:   "vranov-nad-dyji",
+		Name:    "Вранов-над-Дийї",
+	}
+	CzechiaUstiNadLabem = City{
+		Country: Czechia,
+		Alias:   "usti-nad-labem",
+		Name:    "Усті-над-Лабем",
+	}
 )
