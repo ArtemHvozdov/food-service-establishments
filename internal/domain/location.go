@@ -141,4 +141,89 @@ var (
 		Alias:   "usti-nad-labem",
 		Name:    "Усті-над-Лабем",
 	}
+	GermanyBerlin = City{
+		Country: Germany,
+		Alias:   "berlin",
+		Name:    "Берлін",
+	}
+	GermanyBonn = City{
+		Country: Germany,
+		Alias:   "bonn",
+		Name:    "Бонн",
+	}
+	GermanyBremen = City{
+		Country: Germany,
+		Alias:   "bremen",
+		Name:    "Бремен",
+	}
+	GermanyDatteln = City{
+		Country: Germany,
+		Alias:   "datteln",
+		Name:    "Даттельн",
+	}
+	GermanyDortmund = City{
+		Country: Germany,
+		Alias:   "dortmund",
+		Name:    "Дортмунд",
+	}
+	GermanyDresden = City{
+		Country: Germany,
+		Alias:   "dresden",
+		Name:    "Дрезден",
+	}
+	GermanyDusseldorf = City{
+		Country: Germany,
+		Alias:   "dusseldorf",
+		Name:    "Дюссельдорф",
+	}
+	GermanyFrankfurtAmMain = City{
+		Country: Germany,
+		Alias:   "frankfurt-am-main",
+		Name:    "Франкфурт-на-Майні",
+	}
+	GermanyHannover = City{
+		Country: Germany,
+		Alias:   "hannover",
+		Name:    "Ганновер",
+	}
+	GermanyKarlsruhe = City{
+		Country: Germany,
+		Alias:   "karlsruhe",
+		Name:    "Карлсруе",
+	}
+	GermanyKoln = City{
+		Country: Germany,
+		Alias:   "koln",
+		Name:    "Кельн",
+	}
+	GermanyMunchen = City{
+		Country: Germany,
+		Alias:   "munchen",
+		Name:    "Мюнхен",
+	}
+	GermanyNurnberg = City{
+		Country: Germany,
+		Alias:   "nurnberg",
+		Name:    "Нюрнберг",
+	}
+	GermanyPullachImIsartal = City{
+		Country: Germany,
+		Alias:   "pullach-im-isartal",
+		Name:    "Пуллах-Ізарталь",
+	}
+	GermanyRostock = City{
+		Country: Germany,
+		Alias:   "rostock",
+		Name:    "Росток",
+	}
+	GermanyStrubbel = City{
+		Country: Germany,
+		Alias:   "strubbel",
+		Name:    "Штрюббель",
+	}
+	GermanyStuttgart = City{
+		Country: Germany,
+		Alias:   "stuttgart",
+		Name:    "Штутгарт",
+	}
 )
