@@ -226,4 +226,39 @@ var (
 		Alias:   "stuttgart",
 		Name:    "Штутгарт",
 	}
+	SpainAlicante = City{
+		Country: Spain,
+		Alias:   "alicante",
+		Name:    "Аліканте",
+	}
+	SpainBarcelona = City{
+		Country: Spain,
+		Alias:   "barcelona",
+		Name:    "Барселона",
+	}
+	SpainBenalmadena = City{
+		Country: Spain,
+		Alias:   "benalmadena",
+		Name:    "Бенальмадена",
+	}
+	SpainCurtis = City{
+		Country: Spain,
+		Alias:   "curtis",
+		Name:    "Куртіс",
+	}
+	SpainMadrid = City{
+		Country: Spain,
+		Alias:   "madrid",
+		Name:    "Мадрид",
+	}
+	SpainSantFeliuDeLlobregat = City{
+		Country: Spain,
+		Alias:   "sant-feliu-de-llobregat",
+		Name:    "Сант-Феліу-де-Льобрегат",
+	}
+	SpainValencia = City{
+		Country: Spain,
+		Alias:   "valencia",
+		Name:    "Валенсія",
+	}
 )
