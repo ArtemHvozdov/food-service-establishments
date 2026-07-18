@@ -321,4 +321,19 @@ var (
 		Alias:   "pontinha",
 		Name:    "Понтінья",
 	}
+	RomaniaBucuresti = City{
+		Country: Romania,
+		Alias:   "bucuresti",
+		Name:    "Бухарест",
+	}
+	RomaniaClujNapoca = City{
+		Country: Romania,
+		Alias:   "cluj-napoca",
+		Name:    "Клуж-Напока",
+	}
+	RomaniaNavodari = City{
+		Country: Romania,
+		Alias:   "navodari",
+		Name:    "Наводарі",
+	}
 )
