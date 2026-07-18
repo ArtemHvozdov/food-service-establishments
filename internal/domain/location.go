@@ -336,4 +336,14 @@ var (
 		Alias:   "navodari",
 		Name:    "Наводарі",
 	}
+	SlovakiaBratislava = City{
+		Country: Slovakia,
+		Alias:   "bratislava",
+		Name:    "Братислава",
+	}
+	SlovakiaKosice = City{
+		Country: Slovakia,
+		Alias:   "kosice",
+		Name:    "Кошице",
+	}
 )
