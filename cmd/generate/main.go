@@ -8,10 +8,7 @@ import (
 )
 
 func main() {
-	places, err := db.PlacesOld()
-	if err != nil {
-		log.Fatalf("generate: %v", err)
-	}
+	places := db.Places()
 	if err := db.Validate(places); err != nil {
 		log.Fatalf("generate: валідація: %v", err)
 	}
