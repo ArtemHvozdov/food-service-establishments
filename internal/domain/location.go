@@ -261,4 +261,9 @@ var (
 		Alias:   "valencia",
 		Name:    "Валенсія",
 	}
+	HungaryBudapest = City{
+		Country: Hungary,
+		Alias:   "budapest",
+		Name:    "Будапешт",
+	}
 )
