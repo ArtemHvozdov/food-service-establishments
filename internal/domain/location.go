@@ -266,4 +266,34 @@ var (
 		Alias:   "budapest",
 		Name:    "Будапешт",
 	}
+	PolandGdansk = City{
+		Country: Poland,
+		Alias:   "gdansk",
+		Name:    "Гданськ",
+	}
+	PolandGdynia = City{
+		Country: Poland,
+		Alias:   "gdynia",
+		Name:    "Гдиня",
+	}
+	PolandKrakow = City{
+		Country: Poland,
+		Alias:   "krakow",
+		Name:    "Краків",
+	}
+	PolandSzczecin = City{
+		Country: Poland,
+		Alias:   "szczecin",
+		Name:    "Щецин",
+	}
+	PolandWarszawa = City{
+		Country: Poland,
+		Alias:   "warszawa",
+		Name:    "Варшава",
+	}
+	PolandWroclaw = City{
+		Country: Poland,
+		Alias:   "wroclaw",
+		Name:    "Вроцлав",
+	}
 )
