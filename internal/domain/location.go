@@ -346,4 +346,9 @@ var (
 		Alias:   "kosice",
 		Name:    "Кошице",
 	}
+	TurkiyeIzmir = City{
+		Country: Turkiye,
+		Alias:   "izmir",
+		Name:    "Ізмір",
+	}
 )
