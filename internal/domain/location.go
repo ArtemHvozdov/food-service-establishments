@@ -296,4 +296,29 @@ var (
 		Alias:   "wroclaw",
 		Name:    "Вроцлав",
 	}
+	PortugalCascais = City{
+		Country: Portugal,
+		Alias:   "cascais",
+		Name:    "Кашкайш",
+	}
+	PortugalCoimbra = City{
+		Country: Portugal,
+		Alias:   "coimbra",
+		Name:    "Коїмбра",
+	}
+	PortugalLagos = City{
+		Country: Portugal,
+		Alias:   "lagos",
+		Name:    "Лагуш",
+	}
+	PortugalLisboa = City{
+		Country: Portugal,
+		Alias:   "lisboa",
+		Name:    "Лісабон",
+	}
+	PortugalPontinha = City{
+		Country: Portugal,
+		Alias:   "pontinha",
+		Name:    "Понтінья",
+	}
 )
