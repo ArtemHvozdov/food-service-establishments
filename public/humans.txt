@@ -1,6 +1,6 @@
 /* TEAM */
-    Name: Yaroslav Podorvanov
-    Role: Artem Hvozdov
+    Name: Artem Hvozdov
+    Role: Golang Developer
     Profile: https://github.com/ArtemHvozdov
     From: Ukraine
 
