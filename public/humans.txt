@@ -1,0 +1,10 @@
+/* TEAM */
+    Name: Artem Hvozdov
+    Role: Golang Developer
+    Profile: https://github.com/ArtemHvozdov
+    From: Ukraine
+
+    Name: Yaroslav Podorvanov
+    Role: PM
+    Profile: https://github.com/YaroslavPodorvanov
+    From: Ukraine
