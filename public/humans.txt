@@ -1,0 +1,10 @@
+/* TEAM */
+    Name: Yaroslav Podorvanov
+    Role: Artem Hvozdov
+    Profile: https://github.com/ArtemHvozdov
+    From: Ukraine
+
+    Name: Yaroslav Podorvanov
+    Role: PM
+    Profile: https://github.com/YaroslavPodorvanov
+    From: Ukraine
