@@ -1,16 +1,3 @@
 .DS_Store
 .idea
 .vscode
-
-# Generated files
-public/*
-!public/humans.txt
-!public/robots.txt
-
-!public/site.webmanifest
-!public/manifest.json
-!public/browserconfig.xml
-
-!public/favicon.ico
-!public/favicon.svg
-!public/*icon*.png
