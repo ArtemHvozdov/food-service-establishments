@@ -1,7 +1,3 @@
-// Package render містить хелпери, спільні для генерації сторінок: шляхи
-// файлів у public/ та відповідні кореневі URL (internal_docs/task_01.md, 1.6),
-// а згодом — шаблони (1.7) і сам обхід/запис дерева (1.8).
-// Працює виключно з domain.*: DTO-шар (internal/db) сюди не потрапляє (ГЛАВНЫЙ ИНВАРИАНТ).
 package render
 
 import (
@@ -34,25 +30,29 @@ func CountryFilePaths(outputDir string, country domain.Country) (flatFile, index
 // CountryURL повертає кореневий URL сторінки країни. Він один для обох копій
 // файлу (canonical завжди вказує на плоский варіант /[country].html).
 func CountryURL(country domain.Country) string {
-	return "/" + country.Alias + ".html"
+	return "/" + country.Alias + "/"
 }
 
 // CityFilePath повертає шлях файлу сторінки міста всередині outputDir.
-func CityFilePath(outputDir string, city domain.City) string {
-	return filepath.Join(outputDir, city.Country.Alias, city.Alias+".html")
+func CityFilePath(outputDir string, city domain.City) (flatFile, indexFile string) {
+	flatFile = filepath.Join(outputDir, city.Country.Alias, city.Alias+".html")
+	indexFile = filepath.Join(outputDir, city.Country.Alias, city.Alias, "index.html")
+	return flatFile, indexFile
 }
 
 // CityURL повертає кореневий URL сторінки міста.
 func CityURL(city domain.City) string {
-	return "/" + city.Country.Alias + "/" + city.Alias + ".html"
+	return "/" + city.Country.Alias + "/" + city.Alias + "/"
 }
 
 // PlaceFilePath повертає шлях файлу сторінки заведення всередині outputDir.
-func PlaceFilePath(outputDir string, place domain.Place) string {
-	return filepath.Join(outputDir, place.City.Country.Alias, place.City.Alias, place.Alias+".html")
+func PlaceFilePath(outputDir string, place domain.Place) (flatFile, indexFile string) {
+	flatFile = filepath.Join(outputDir, place.City.Country.Alias, place.City.Alias, place.Alias+".html")
+	indexFile = filepath.Join(outputDir, place.City.Country.Alias, place.City.Alias, place.Alias, "index.html")
+	return flatFile, indexFile
 }
 
 // PlaceURL повертає кореневий URL сторінки заведення.
 func PlaceURL(place domain.Place) string {
-	return "/" + place.City.Country.Alias + "/" + place.City.Alias + "/" + place.Alias + ".html"
+	return "/" + place.City.Country.Alias + "/" + place.City.Alias + "/" + place.Alias + "/"
 }

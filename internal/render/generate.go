@@ -19,22 +19,31 @@ func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
 		return err
 	}
 
-	for _, country := range groups {
-		flatFile, indexFile := CountryFilePaths(outputDir, country.Country)
-		if err := writePage(countryTemplate, country, flatFile); err != nil {
+	for _, countryGroup := range groups {
+		countryFlatFile, countryIndexFile := CountryFilePaths(outputDir, countryGroup.Country)
+		if err := writePage(countryTemplate, countryGroup, countryFlatFile); err != nil {
 			return err
 		}
-		if err := writePage(countryTemplate, country, indexFile); err != nil {
+		if err := writePage(countryTemplate, countryGroup, countryIndexFile); err != nil {
 			return err
 		}
 
-		for _, city := range country.Cities {
-			if err := writePage(cityTemplate, city, CityFilePath(outputDir, city.City)); err != nil {
+		for _, cityGroup := range countryGroup.Cities {
+			cityFlatFile, cityIndexFile := CityFilePath(outputDir, cityGroup.City)
+			if err := writePage(cityTemplate, cityGroup, cityFlatFile); err != nil {
+				return err
+			}
+			if err := writePage(cityTemplate, cityGroup, cityIndexFile); err != nil {
 				return err
 			}
 
-			for _, place := range city.Places {
-				if err := writePage(placeTemplate, place, PlaceFilePath(outputDir, place)); err != nil {
+			for _, place := range cityGroup.Places {
+				placeFlatFile, placeIndexFile := PlaceFilePath(outputDir, place)
+
+				if err := writePage(placeTemplate, place, placeFlatFile); err != nil {
+					return err
+				}
+				if err := writePage(placeTemplate, place, placeIndexFile); err != nil {
 					return err
 				}
 			}
