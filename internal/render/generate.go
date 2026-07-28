@@ -11,20 +11,16 @@ import (
 )
 
 // Generate обходить []domain.CountryPlaceGroup (результат db.Places()) і
-// записує все дерево сторінок сайту в outputDir: головну, сторінки країн
-// (двома копіями — internal_docs/task_01.md, 1.8), міст і заведень. Шляхи
-// файлів беруться з хелперів 1.6 (render.*FilePath).
+// записує все дерево сторінок сайту в outputDir: головну, сторінки країн,
+// міст і заведень (директорійна схема — internal_docs/refactor_url_scheme).
+// Шляхи файлів беруться з хелперів 1.6 (render.*FilePath).
 func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
 	if err := writePage(indexTemplate, groups, IndexFilePath(outputDir)); err != nil {
 		return err
 	}
 
 	for _, country := range groups {
-		flatFile, indexFile := CountryFilePaths(outputDir, country.Country)
-		if err := writePage(countryTemplate, country, flatFile); err != nil {
-			return err
-		}
-		if err := writePage(countryTemplate, country, indexFile); err != nil {
+		if err := writePage(countryTemplate, country, CountryFilePath(outputDir, country.Country)); err != nil {
 			return err
 		}
 

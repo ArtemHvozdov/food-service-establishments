@@ -10,6 +10,12 @@ import (
 	"github.com/ArtemHvozdov/food-service-establishments/internal/domain"
 )
 
+// Схема URL — директорійна: кожен рівень є директорією з index.html, а
+// відповідний URL має кінцевий слеш (internal_docs/refactor_url_scheme).
+// Це канонічний вигляд для Cloudflare Pages: `/foo.html` і директорія без
+// кінцевого слеша нормалізуються 308-редіректом на `/foo/`, тож самі
+// посилання одразу пишуться в кінцевій формі, без зайвого редіректу.
+
 // IndexFilePath повертає шлях файлу головної сторінки всередині outputDir.
 func IndexFilePath(outputDir string) string {
 	return filepath.Join(outputDir, "index.html")
@@ -20,39 +26,34 @@ func IndexURL() string {
 	return "/"
 }
 
-// CountryFilePaths повертає ДВА шляхи файлу сторінки країни всередині
-// outputDir: плоский [outputDir]/[country].html і вкладений
-// [outputDir]/[country]/index.html. Обидва файли пишуться однаковим шаблоном
-// (1.8) — це навмисне дублювання заради сумісності з різними правилами
-// маршрутизації статичних хостингів.
-func CountryFilePaths(outputDir string, country domain.Country) (flatFile, indexFile string) {
-	flatFile = filepath.Join(outputDir, country.Alias+".html")
-	indexFile = filepath.Join(outputDir, country.Alias, "index.html")
-	return flatFile, indexFile
+// CountryFilePath повертає шлях файлу сторінки країни всередині outputDir:
+// [outputDir]/[country]/index.html. Плоскої копії (`[country].html`) більше
+// немає — директорійна схема покриває обидва випадки одним файлом.
+func CountryFilePath(outputDir string, country domain.Country) string {
+	return filepath.Join(outputDir, country.Alias, "index.html")
 }
 
-// CountryURL повертає кореневий URL сторінки країни. Він один для обох копій
-// файлу (canonical завжди вказує на плоский варіант /[country].html).
+// CountryURL повертає кореневий URL сторінки країни.
 func CountryURL(country domain.Country) string {
-	return "/" + country.Alias + ".html"
+	return "/" + country.Alias + "/"
 }
 
 // CityFilePath повертає шлях файлу сторінки міста всередині outputDir.
 func CityFilePath(outputDir string, city domain.City) string {
-	return filepath.Join(outputDir, city.Country.Alias, city.Alias+".html")
+	return filepath.Join(outputDir, city.Country.Alias, city.Alias, "index.html")
 }
 
 // CityURL повертає кореневий URL сторінки міста.
 func CityURL(city domain.City) string {
-	return "/" + city.Country.Alias + "/" + city.Alias + ".html"
+	return "/" + city.Country.Alias + "/" + city.Alias + "/"
 }
 
 // PlaceFilePath повертає шлях файлу сторінки заведення всередині outputDir.
 func PlaceFilePath(outputDir string, place domain.Place) string {
-	return filepath.Join(outputDir, place.City.Country.Alias, place.City.Alias, place.Alias+".html")
+	return filepath.Join(outputDir, place.City.Country.Alias, place.City.Alias, place.Alias, "index.html")
 }
 
 // PlaceURL повертає кореневий URL сторінки заведення.
 func PlaceURL(place domain.Place) string {
-	return "/" + place.City.Country.Alias + "/" + place.City.Alias + "/" + place.Alias + ".html"
+	return "/" + place.City.Country.Alias + "/" + place.City.Alias + "/" + place.Alias + "/"
 }
