@@ -11,39 +11,26 @@ import (
 )
 
 // Generate обходить []domain.CountryPlaceGroup (результат db.Places()) і
-// записує все дерево сторінок сайту в outputDir: головну, сторінки країн
-// (двома копіями — internal_docs/task_01.md, 1.8), міст і заведень. Шляхи
-// файлів беруться з хелперів 1.6 (render.*FilePath).
+// записує все дерево сторінок сайту в outputDir: головну, сторінки країн,
+// міст і заведень (директорійна схема — internal_docs/refactor_url_scheme).
+// Шляхи файлів беруться з хелперів 1.6 (render.*FilePath).
 func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
 	if err := writePage(indexTemplate, groups, IndexFilePath(outputDir)); err != nil {
 		return err
 	}
 
-	for _, countryGroup := range groups {
-		countryFlatFile, countryIndexFile := CountryFilePaths(outputDir, countryGroup.Country)
-		if err := writePage(countryTemplate, countryGroup, countryFlatFile); err != nil {
-			return err
-		}
-		if err := writePage(countryTemplate, countryGroup, countryIndexFile); err != nil {
+	for _, country := range groups {
+		if err := writePage(countryTemplate, country, CountryFilePath(outputDir, country.Country)); err != nil {
 			return err
 		}
 
-		for _, cityGroup := range countryGroup.Cities {
-			cityFlatFile, cityIndexFile := CityFilePath(outputDir, cityGroup.City)
-			if err := writePage(cityTemplate, cityGroup, cityFlatFile); err != nil {
-				return err
-			}
-			if err := writePage(cityTemplate, cityGroup, cityIndexFile); err != nil {
+		for _, city := range country.Cities {
+			if err := writePage(cityTemplate, city, CityFilePath(outputDir, city.City)); err != nil {
 				return err
 			}
 
-			for _, place := range cityGroup.Places {
-				placeFlatFile, placeIndexFile := PlaceFilePath(outputDir, place)
-
-				if err := writePage(placeTemplate, place, placeFlatFile); err != nil {
-					return err
-				}
-				if err := writePage(placeTemplate, place, placeIndexFile); err != nil {
+			for _, place := range city.Places {
+				if err := writePage(placeTemplate, place, PlaceFilePath(outputDir, place)); err != nil {
 					return err
 				}
 			}
