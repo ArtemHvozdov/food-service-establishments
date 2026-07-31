@@ -8,7 +8,7 @@ import (
 	"github.com/ArtemHvozdov/food-service-establishments/internal/domain"
 )
 
-// go:embed templates/layout.html templates/partials.html templates/place.html templates/city.html templates/country.html templates/index.html
+//go:embed templates/layout.html templates/partials.html templates/place.html templates/city.html templates/country.html templates/index.html
 var templateFS embed.FS
 
 // funcMap — функції, доступні шаблонам. Посилання (href) і head-метадані
