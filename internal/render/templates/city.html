@@ -1,6 +1,20 @@
 {{define "content"}}
-<h1>Заклади у {{.City.Name}}, {{.City.Country.Name}}</h1>
-<ul>
-{{range .Places}}<li><a href="{{placeURL .}}">{{.Name}}</a></li>
-{{end}}</ul>
+{{template "breadcrumbs" .}}
+<h1>Українська кухня в {{.City.Name}}</h1>
+<h2 class="section-label">Заклади</h2>
+<div class="places-grid">
+{{range .Places}}<div class="place-card">
+  <div class="place-card__body">
+    <p class="place-card__name"><a href="{{placeURL .}}">{{.Name}}</a></p>
+    <p class="place-card__type">{{.Type.Name}}</p>
+    <p class="place-card__address">{{.Address}}</p>
+    <div class="place-card__links">
+      {{if .GoogleMapsURL}}<a href="{{.GoogleMapsURL}}">Мапа</a>{{end}}
+      {{if .InstagramURL}}<a href="{{.InstagramURL}}">Instagram</a>{{end}}
+      {{if .FacebookURL}}<a href="{{.FacebookURL}}">Facebook</a>{{end}}
+    </div>
+  </div>
+</div>
+{{end}}</div>
+{{template "backlink" .}}
 {{end}}
