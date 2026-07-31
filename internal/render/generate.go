@@ -15,6 +15,10 @@ import (
 // міст і заведень (директорійна схема — internal_docs/refactor_url_scheme).
 // Шляхи файлів беруться з хелперів 1.6 (render.*FilePath).
 func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
+	if err := copyStaticAssets(outputDir); err != nil {
+		return err
+	}
+
 	if err := writePage(indexTemplate, groups, IndexFilePath(outputDir)); err != nil {
 		return err
 	}

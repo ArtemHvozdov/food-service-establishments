@@ -2,13 +2,16 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{pageTitle .}}</title>
 <meta name="description" content="{{pageDescription .}}">
 <link rel="canonical" href="{{canonicalOf .}}">
-<!-- TODO: підключити спільний CSS -->
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<div class="container">
 {{template "content" .}}
+</div>
 </body>
 </html>
 {{end}}
