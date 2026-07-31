@@ -8,7 +8,7 @@ import (
 	"github.com/ArtemHvozdov/food-service-establishments/internal/domain"
 )
 
-//go:embed templates/layout.html templates/place.html templates/city.html templates/country.html templates/index.html
+// go:embed templates/layout.html templates/partials.html templates/place.html templates/city.html templates/country.html templates/index.html
 var templateFS embed.FS
 
 // funcMap — функції, доступні шаблонам. Посилання (href) і head-метадані
@@ -21,15 +21,18 @@ var funcMap = template.FuncMap{
 	"pageTitle":       pageTitle,
 	"pageDescription": pageDescription,
 	"canonicalOf":     canonicalOf,
+	"breadcrumbs":     breadcrumbs,
+	"upLink":          upLink,
 }
 
-// newPageTemplate компілює спільний layout ("layout.html") разом з одним
-// файлом контенту сторінки (той визначає {{define "content"}}). Кожен тип
-// сторінки має свій незалежний *template.Template, тому що всі файли
-// контенту визначають блок з однаковим ім'ям "content" — розбір їх усіх
-// разом в один набір призвів би до взаємного перезапису.
+// newPageTemplate компілює спільний layout ("layout.html") і спільні partial'и
+// навігації ("partials.html") разом з одним файлом контенту сторінки (той
+// визначає {{define "content"}}). Кожен тип сторінки має свій незалежний
+// *template.Template, тому що всі файли контенту визначають блок з однаковим
+// ім'ям "content" — розбір їх усіх разом в один набір призвів би до
+// взаємного перезапису.
 func newPageTemplate(contentFile string) *template.Template {
-	tmpl := template.Must(template.New("layout").Funcs(funcMap).ParseFS(templateFS, "templates/layout.html"))
+	tmpl := template.Must(template.New("layout").Funcs(funcMap).ParseFS(templateFS, "templates/layout.html", "templates/partials.html"))
 	return template.Must(tmpl.ParseFS(templateFS, contentFile))
 }
 
@@ -93,5 +96,65 @@ func canonicalOf(v any) string {
 		return IndexURL()
 	default:
 		return ""
+	}
+}
+
+// crumb — один елемент хлібної крихти (design.md §4.1). Порожній URL означає
+// поточну сторінку — вона рендериться текстом, не посиланням.
+type crumb struct {
+	Name string
+	URL  string
+}
+
+// breadcrumbs будує ланцюжок хлібних крихт за типом даних сторінки.
+// Архітектурне рішення (задача 3.2): окремий view-model рівня render, що
+// обгортав би дані сторінки предками, тут не потрібен — Place.City і
+// City.Country вже дають прямий доступ до всіх предків, тож helper просто
+// повторює прийом pageTitle/pageDescription/canonicalOf: перемикання за
+// типом контексту, переданого в шаблон. На головній (`[]domain.CountryPlaceGroup`)
+// крихт немає взагалі (design.md §4.1) — nil.
+func breadcrumbs(v any) []crumb {
+	switch data := v.(type) {
+	case domain.Place:
+		return []crumb{
+			{Name: "Головна", URL: IndexURL()},
+			{Name: data.City.Country.Name, URL: CountryURL(data.City.Country)},
+			{Name: data.City.Name, URL: CityURL(data.City)},
+			{Name: data.Name},
+		}
+	case domain.CityPlaceGroup:
+		return []crumb{
+			{Name: "Головна", URL: IndexURL()},
+			{Name: data.City.Country.Name, URL: CountryURL(data.City.Country)},
+			{Name: data.City.Name},
+		}
+	case domain.CountryPlaceGroup:
+		return []crumb{
+			{Name: "Головна", URL: IndexURL()},
+			{Name: data.Country.Name},
+		}
+	default:
+		return nil
+	}
+}
+
+// backLink — посилання «вгору на рівень» унизу не-головної сторінки (design.md §4.2).
+type backLink struct {
+	Text string
+	URL  string
+}
+
+// upLink повертає посилання на батьківський рівень за типом даних сторінки,
+// або nil для головної (там посилання вгору немає — нікуди підійматися).
+func upLink(v any) *backLink {
+	switch data := v.(type) {
+	case domain.Place:
+		return &backLink{Text: "← Усі заклади в " + data.City.Name, URL: CityURL(data.City)}
+	case domain.CityPlaceGroup:
+		return &backLink{Text: "← Усі міста в " + data.City.Country.Name, URL: CountryURL(data.City.Country)}
+	case domain.CountryPlaceGroup:
+		return &backLink{Text: "← Усі країни", URL: IndexURL()}
+	default:
+		return nil
 	}
 }

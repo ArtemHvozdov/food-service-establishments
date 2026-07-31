@@ -1,0 +1,5 @@
+{{/* Спільні для всіх рівнів partial'и навігації (design.md §4.1, §4.2). */}}
+
+{{define "breadcrumbs"}}{{$crumbs := breadcrumbs .}}{{if $crumbs}}<nav class="breadcrumbs" aria-label="Хлібні крихти">{{range $i, $c := $crumbs}}{{if $i}}<span> / </span>{{end}}{{if $c.URL}}<a href="{{$c.URL}}">{{$c.Name}}</a>{{else}}<span class="breadcrumbs__current">{{$c.Name}}</span>{{end}}{{end}}</nav>{{end}}{{end}}
+
+{{define "backlink"}}{{$link := upLink .}}{{if $link}}<a class="back-link" href="{{$link.URL}}">{{$link.Text}}</a>{{end}}{{end}}
