@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{pageTitle .}}</title>
 <meta name="description" content="{{pageDescription .}}">
-<link rel="canonical" href="{{canonicalOf .}}">
+<link rel="canonical" href="{{absURL (canonicalOf .)}}">
+<meta property="og:title" content="{{pageTitle .}}">
+<meta property="og:description" content="{{pageDescription .}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{absURL (canonicalOf .)}}">
+<meta property="og:locale" content="uk_UA">
+{{template "jsonld" .}}
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
