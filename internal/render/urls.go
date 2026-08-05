@@ -16,6 +16,20 @@ import (
 // кінцевого слеша нормалізуються 308-редіректом на `/foo/`, тож самі
 // посилання одразу пишуться в кінцевій формі, без зайвого редіректу.
 
+// baseURL — базовий домен сайту (Cloudflare Pages), єдина точка конфігурації
+// для абсолютних SEO-посилань (задача 3.3.2). Без кінцевого слеша: усі
+// *URL-хелпери вище вже повертають шлях з початковим "/", тож конкатенація
+// в absURL ніколи не дає "//".
+const baseURL = "https://food-service-establishments.pages.dev"
+
+// absURL повертає абсолютний URL для SEO-контексту (JSON-LD, og:url,
+// canonical) з кореневого шляху, який дають *URL-хелпери вище. Видимі
+// посилання в <body> (крихти, картки, back-link) залишаються відносними —
+// absURL до них не застосовується.
+func absURL(path string) string {
+	return baseURL + path
+}
+
 // IndexFilePath повертає шлях файлу головної сторінки всередині outputDir.
 func IndexFilePath(outputDir string) string {
 	return filepath.Join(outputDir, "index.html")
