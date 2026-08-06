@@ -6,8 +6,9 @@ type Location struct {
 }
 
 type Country struct {
-	Alias string // Poland
-	Name  string // Польща
+	Alias   string // Poland
+	Name    string // Польща
+	ISOCode string // PL — ISO 3166-1 alpha-2, для schema.org addressCountry (задача 3.3.3)
 }
 
 type City struct {
@@ -20,48 +21,59 @@ type City struct {
 // Додаток A. Країни визначаються вручну: множина маленька і майже не росте.
 var (
 	Bulgaria = Country{
-		Alias: "bulgaria",
-		Name:  "Болгарія",
+		Alias:   "bulgaria",
+		Name:    "Болгарія",
+		ISOCode: "BG",
 	}
 	Cyprus = Country{
-		Alias: "cyprus",
-		Name:  "Кіпр",
+		Alias:   "cyprus",
+		Name:    "Кіпр",
+		ISOCode: "CY",
 	}
 	Czechia = Country{
-		Alias: "czechia",
-		Name:  "Чехія",
+		Alias:   "czechia",
+		Name:    "Чехія",
+		ISOCode: "CZ",
 	}
 	Germany = Country{
-		Alias: "germany",
-		Name:  "Німеччина",
+		Alias:   "germany",
+		Name:    "Німеччина",
+		ISOCode: "DE",
 	}
 	Spain = Country{
-		Alias: "spain",
-		Name:  "Іспанія",
+		Alias:   "spain",
+		Name:    "Іспанія",
+		ISOCode: "ES",
 	}
 	Poland = Country{
-		Alias: "poland",
-		Name:  "Польща",
+		Alias:   "poland",
+		Name:    "Польща",
+		ISOCode: "PL",
 	}
 	Portugal = Country{
-		Alias: "portugal",
-		Name:  "Португалія",
+		Alias:   "portugal",
+		Name:    "Португалія",
+		ISOCode: "PT",
 	}
 	Romania = Country{
-		Alias: "romania",
-		Name:  "Румунія",
+		Alias:   "romania",
+		Name:    "Румунія",
+		ISOCode: "RO",
 	}
 	Slovakia = Country{
-		Alias: "slovakia",
-		Name:  "Словаччина",
+		Alias:   "slovakia",
+		Name:    "Словаччина",
+		ISOCode: "SK",
 	}
 	Turkiye = Country{
-		Alias: "turkiye",
-		Name:  "Туреччина",
+		Alias:   "turkiye",
+		Name:    "Туреччина",
+		ISOCode: "TR",
 	}
 	Hungary = Country{
-		Alias: "hungary",
-		Name:  "Угорщина",
+		Alias:   "hungary",
+		Name:    "Угорщина",
+		ISOCode: "HU",
 	}
 )
 

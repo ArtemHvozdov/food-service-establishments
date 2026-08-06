@@ -3,3 +3,12 @@
 {{define "breadcrumbs"}}{{$crumbs := breadcrumbs .}}{{if $crumbs}}<nav class="breadcrumbs" aria-label="Хлібні крихти">{{range $i, $c := $crumbs}}{{if $i}}<span> / </span>{{end}}{{if $c.URL}}<a href="{{$c.URL}}">{{$c.Name}}</a>{{else}}<span class="breadcrumbs__current">{{$c.Name}}</span>{{end}}{{end}}</nav>{{end}}{{end}}
 
 {{define "backlink"}}{{$link := upLink .}}{{if $link}}<a class="back-link" href="{{$link.URL}}">{{$link.Text}}</a>{{end}}{{end}}
+
+{{/* JSON-LD (schema.org), задача 3.3: BreadcrumbList скрізь, де є крихти;
+     ItemList на сторінках-списках (країна/місто); Restaurant/FoodEstablishment
+     на сторінці заклада. Кожен *JSONLD-хелпер сам розпізнає тип контексту й
+     повертає порожньо, якщо не застосовний до поточної сторінки. */}}
+{{define "jsonld"}}{{$bc := breadcrumbListJSONLD .}}{{if $bc}}<script type="application/ld+json">{{$bc}}</script>
+{{end}}{{$il := itemListJSONLD .}}{{if $il}}<script type="application/ld+json">{{$il}}</script>
+{{end}}{{$pl := placeJSONLD .}}{{if $pl}}<script type="application/ld+json">{{$pl}}</script>
+{{end}}{{end}}
