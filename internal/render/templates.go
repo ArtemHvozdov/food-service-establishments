@@ -26,6 +26,7 @@ var funcMap = template.FuncMap{
 	"breadcrumbs":     breadcrumbs,
 	"upLink":          upLink,
 	"absURL":          absURL,
+	"ogImage":         ogImage,
 
 	"breadcrumbListJSONLD": breadcrumbListJSONLD,
 	"itemListJSONLD":       itemListJSONLD,
@@ -104,6 +105,22 @@ func canonicalOf(v any) string {
 	default:
 		return ""
 	}
+}
+
+// ogImage повертає URL og:image (задача 3.4, design.md §6.1) — тільки для
+// сторінки заведення й тільки коли Place.PhotoURL заповнений. PhotoURL, на
+// відміну від кореневих *URL-хелперів, уже зберігається як повний абсолютний
+// URL (Validate вимагає в нього схему http(s)://, як і в інших зовнішніх
+// посиланнях заклада) — тож на відміну від canonicalOf/breadcrumbs тут НЕ
+// потрібен absURL, він тільки задвоїв би домен. Поки фото немає в даних,
+// повертає "" — layout.html тоді не рендерить тег og:image взагалі (порожній
+// og:image гірший за його відсутність).
+func ogImage(v any) string {
+	place, ok := v.(domain.Place)
+	if !ok {
+		return ""
+	}
+	return place.PhotoURL
 }
 
 // crumb — один елемент хлібної крихти (design.md §4.1). Порожній URL означає
@@ -325,6 +342,7 @@ type jsonLDPlace struct {
 	Address jsonLDPostalAddress  `json:"address"`
 	Geo     jsonLDGeoCoordinates `json:"geo"`
 	URL     string               `json:"url"`
+	Image   string               `json:"image,omitempty"`
 	SameAs  []string             `json:"sameAs,omitempty"`
 }
 
@@ -366,6 +384,9 @@ func placeJSONLD(v any) template.JS {
 			Longitude: place.Location.Longitude,
 		},
 		URL:    absURL(PlaceURL(place)),
+		// Image — той самий og:image (ogImage вище): порожній PhotoURL дає
+		// "", а omitempty прибирає поле з JSON-LD цілком.
+		Image:  ogImage(place),
 		SameAs: sameAs,
 	})
 }

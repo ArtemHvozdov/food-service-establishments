@@ -4,6 +4,19 @@
 
 {{define "backlink"}}{{$link := upLink .}}{{if $link}}<a class="back-link" href="{{$link.URL}}">{{$link.Text}}</a>{{end}}{{end}}
 
+{{/* Фото-заклад (design.md §4.3/§4.4/§6.1, задача 3.4). Context "." — сам
+     domain.Place (у city.html це поточний елемент {{range .Places}}, у
+     place.html — дані сторінки цілком). Поки Place.PhotoURL порожній для
+     всіх заведень — рендериться плейсхолдер (тло --ph, іконка --ph-ink);
+     коли поле заповниться — той самий контейнер (aspect-ratio/border-radius,
+     без CLS) отримує <img loading="lazy"> з описовим alt. Дві версії
+     відрізняються лише класом контейнера (картка 16/10 vs деталі 16/8). */}}
+{{define "placeCardPhoto"}}{{if .PhotoURL}}<div class="photo"><img src="{{.PhotoURL}}" alt="{{.Name}} — {{.Type.Name}} української кухні в {{.City.Name}}" loading="lazy"></div>{{else}}<div class="photo-placeholder">{{template "photoIcon"}}</div>{{end}}{{end}}
+
+{{define "placeDetailPhoto"}}{{if .PhotoURL}}<div class="photo photo--detail"><img src="{{.PhotoURL}}" alt="{{.Name}} — {{.Type.Name}} української кухні в {{.City.Name}}" loading="lazy"></div>{{else}}<div class="photo-placeholder photo-placeholder--detail">{{template "photoIcon"}}</div>{{end}}{{end}}
+
+{{define "photoIcon"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>{{end}}
+
 {{/* JSON-LD (schema.org), задача 3.3: BreadcrumbList скрізь, де є крихти;
      ItemList на сторінках-списках (країна/місто); Restaurant/FoodEstablishment
      на сторінці заклада. Кожен *JSONLD-хелпер сам розпізнає тип контексту й

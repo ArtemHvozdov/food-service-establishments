@@ -11,6 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{absURL (canonicalOf .)}}">
 <meta property="og:locale" content="uk_UA">
+{{if ogImage .}}<meta property="og:image" content="{{ogImage .}}">{{end}}
 {{template "jsonld" .}}
 <link rel="stylesheet" href="/style.css">
 </head>
