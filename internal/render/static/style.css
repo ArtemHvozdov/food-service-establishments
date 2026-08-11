@@ -207,6 +207,27 @@ p {
   fill: currentColor;
 }
 
+/* Реальне фото закладу (Place.PhotoURL заповнений) — той самий контейнер
+   (aspect-ratio/border-radius), що й плейсхолдер, щоб підстановка фото не
+   зсувала верстку (CLS); overflow: hidden + object-fit: cover обрізають
+   зображення під фіксовану рамку. */
+.photo {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.photo--detail {
+  aspect-ratio: 16 / 8;
+  border-radius: 12px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ===== 10. Картка заведення ===== */
 
 .place-card {

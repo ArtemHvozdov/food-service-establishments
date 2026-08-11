@@ -4,6 +4,7 @@
 <h2 class="section-label">Заклади</h2>
 <div class="places-grid">
 {{range .Places}}<div class="place-card">
+  {{template "placeCardPhoto" .}}
   <div class="place-card__body">
     <p class="place-card__name"><a href="{{placeURL .}}">{{.Name}}</a></p>
     <p class="place-card__type">{{.Type.Name}}</p>
