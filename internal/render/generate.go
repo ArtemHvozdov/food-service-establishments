@@ -41,6 +41,10 @@ func Generate(groups []domain.CountryPlaceGroup, outputDir string) error {
 		}
 	}
 
+	if err := writeSitemap(groups, outputDir); err != nil {
+		return err
+	}
+
 	return nil
 }
 
