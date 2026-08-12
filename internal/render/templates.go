@@ -107,20 +107,22 @@ func canonicalOf(v any) string {
 	}
 }
 
-// ogImage повертає URL og:image (задача 3.4, design.md §6.1) — тільки для
-// сторінки заведення й тільки коли Place.PhotoURL заповнений. PhotoURL, на
-// відміну від кореневих *URL-хелперів, уже зберігається як повний абсолютний
-// URL (Validate вимагає в нього схему http(s)://, як і в інших зовнішніх
-// посиланнях заклада) — тож на відміну від canonicalOf/breadcrumbs тут НЕ
-// потрібен absURL, він тільки задвоїв би домен. Поки фото немає в даних,
-// повертає "" — layout.html тоді не рендерить тег og:image взагалі (порожній
-// og:image гірший за його відсутність).
+// ogImage повертає абсолютний URL og:image (задача 3.4, доопрацьовано в 3.6,
+// design.md §6.1) — тільки для сторінки заведення й тільки коли
+// Place.PhotoURL заповнений. PhotoURL зберігається як кореневий шлях
+// ("/photos/...", Validate це перевіряє), так само як і URL з
+// canonicalOf/breadcrumbs, тож тут так само потрібен absURL — інакше
+// og:image був би відносним, що Google Rich Results не резолвить. Поки фото
+// немає в даних, повертає "" — layout.html тоді не рендерить тег og:image
+// взагалі (порожній og:image гірший за його відсутність); саме тому перевірка
+// на порожній PhotoURL — до виклику absURL, бо absURL("") дав би хибний
+// непорожній baseURL.
 func ogImage(v any) string {
 	place, ok := v.(domain.Place)
-	if !ok {
+	if !ok || place.PhotoURL == "" {
 		return ""
 	}
-	return place.PhotoURL
+	return absURL(place.PhotoURL)
 }
 
 // crumb — один елемент хлібної крихти (design.md §4.1). Порожній URL означає

@@ -38,6 +38,17 @@ func hasValidURLScheme(url string) bool {
 	return url == "" || strings.HasPrefix(url, "http://") || strings.HasPrefix(url, "https://")
 }
 
+// hasValidPhotoPath перевіряє, що непорожній PhotoURL — кореневий шлях
+// вигляду "/photos/..." (задача 3.6). На відміну від зовнішніх посилань
+// (URL/GoogleMapsURL/MenuURL/FacebookURL/InstagramURL), фото — свої, лежать
+// локально (internal/render/static/photos/...) і роздаються з того самого
+// домену, тож у даних домен не потрібен — його додає absURL() при рендері
+// (єдина точка конфігурації домену, internal/render/urls.go). Порожній
+// рядок вважається допустимим — поле не заповнене.
+func hasValidPhotoPath(path string) bool {
+	return path == "" || strings.HasPrefix(path, "/photos/")
+}
+
 // Validate обходить дерево країна -> місто -> заклад, повернуте Places(), і
 // перевіряє інваріанти, на які спирається рендер (internal_docs/task_01.md,
 // 1.5). Це чекпоінт над уже зібраним результатом — не дублює логіку
@@ -105,7 +116,6 @@ func Validate(groups []domain.CountryPlaceGroup) error {
 					{"URL", place.URL},
 					{"GoogleMapsURL", place.GoogleMapsURL},
 					{"MenuURL", place.MenuURL},
-					{"PhotoURL", place.PhotoURL},
 					{"FacebookURL", place.FacebookURL},
 					{"InstagramURL", place.InstagramURL},
 				}
@@ -113,6 +123,12 @@ func Validate(groups []domain.CountryPlaceGroup) error {
 					if !hasValidURLScheme(f.url) {
 						errs = append(errs, fmt.Errorf("db: place %q (alias %q, city %q/%q) has %s with invalid scheme: %q", place.Name, place.Alias, country.Country.Alias, city.City.Alias, f.name, f.url))
 					}
+				}
+
+				// PhotoURL — окремо від зовнішніх посилань вище: це кореневий
+				// шлях до свого файла (задача 3.6), а не зовнішній http(s)://.
+				if !hasValidPhotoPath(place.PhotoURL) {
+					errs = append(errs, fmt.Errorf("db: place %q (alias %q, city %q/%q) has PhotoURL not a root-relative /photos/ path: %q", place.Name, place.Alias, country.Country.Alias, city.City.Alias, place.PhotoURL))
 				}
 			}
 		}
