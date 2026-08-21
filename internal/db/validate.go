@@ -125,10 +125,15 @@ func Validate(groups []domain.CountryPlaceGroup) error {
 					}
 				}
 
+				if !hasValidURLScheme(place.Photo.SourceURL) {
+					errs = append(errs, fmt.Errorf("db: place %q (alias %q, city %q/%q) has Photo.SourceURL with invalid scheme: %q",
+						place.Name, place.Alias, country.Country.Alias, city.City.Alias, place.Photo.SourceURL))
+				}
+
 				// PhotoURL — окремо від зовнішніх посилань вище: це кореневий
 				// шлях до свого файла (задача 3.6), а не зовнішній http(s)://.
-				if !hasValidPhotoPath(place.PhotoURL) {
-					errs = append(errs, fmt.Errorf("db: place %q (alias %q, city %q/%q) has PhotoURL not a root-relative /photos/ path: %q", place.Name, place.Alias, country.Country.Alias, city.City.Alias, place.PhotoURL))
+				if !hasValidPhotoPath(place.Photo.Path) {
+					errs = append(errs, fmt.Errorf("db: place %q (alias %q, city %q/%q) has PhotoURL not a root-relative /photos/ path: %q", place.Name, place.Alias, country.Country.Alias, city.City.Alias, place.Photo.Path))
 				}
 			}
 		}

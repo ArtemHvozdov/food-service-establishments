@@ -39,7 +39,7 @@ type Place struct {
 	Type            PlaceType
 	URL             string
 	MenuURL         string
-	PhotoURL        string
+	Photo           Photo
 	InstagramURL    string
 	FacebookURL     string
 	GoogleMapsURL   string

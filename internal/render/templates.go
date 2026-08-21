@@ -119,10 +119,10 @@ func canonicalOf(v any) string {
 // непорожній baseURL.
 func ogImage(v any) string {
 	place, ok := v.(domain.Place)
-	if !ok || place.PhotoURL == "" {
+	if !ok || place.Photo.Path == "" {
 		return ""
 	}
-	return absURL(place.PhotoURL)
+	return absURL(place.Photo.Path)
 }
 
 // crumb — один елемент хлібної крихти (design.md §4.1). Порожній URL означає
