@@ -15,12 +15,29 @@ import (
 //go:embed static/style.css static/fonts/*.woff2
 var staticFS embed.FS
 
-// copyStaticAssets копіює вміст staticFS у корінь outputDir, зберігаючи
-// відносні шляхи (static/style.css → outputDir/style.css,
-// static/fonts/*.woff2 → outputDir/fonts/*.woff2) — у розмітці ці шляхи
-// кореневі (/style.css, /fonts/...).
+// photosFS — фото закладів (static/photos/<country>/<city>/<place>.webp),
+// вбудовані окремо від staticFS: go:embed не підтримує порожній патерн
+// (ламає збірку), тому embed додається лише коли папка непорожня.
+//
+//go:embed static/photos
+var photosFS embed.FS
+
+// copyStaticAssets копіює вміст staticFS і photosFS у корінь outputDir,
+// зберігаючи відносні шляхи:
+//   static/style.css             → outputDir/style.css
+//   static/fonts/*.woff2         → outputDir/fonts/*.woff2
+//   static/photos/**/*.webp      → outputDir/photos/**/*.webp
 func copyStaticAssets(outputDir string) error {
-	return fs.WalkDir(staticFS, "static", func(path string, d fs.DirEntry, err error) error {
+	if err := copyFS(staticFS, "static", outputDir); err != nil {
+		return err
+	}
+	return copyFS(photosFS, "static/photos", filepath.Join(outputDir, "photos"))
+}
+
+// copyFS обходить fsys починаючи з root і копіює всі файли у destDir,
+// зберігаючи відносну структуру підпапок.
+func copyFS(fsys embed.FS, root, destDir string) error {
+	return fs.WalkDir(fsys, root, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
@@ -28,13 +45,13 @@ func copyStaticAssets(outputDir string) error {
 			return nil
 		}
 
-		rel, err := filepath.Rel("static", path)
+		rel, err := filepath.Rel(root, path)
 		if err != nil {
 			return err
 		}
 
-		dst := filepath.Join(outputDir, rel)
-		data, err := staticFS.ReadFile(path)
+		dst := filepath.Join(destDir, rel)
+		data, err := fsys.ReadFile(path)
 		if err != nil {
 			return fmt.Errorf("render: read asset %s: %w", path, err)
 		}

@@ -13,3 +13,11 @@ type YoutubeVideo struct {
 	URL  string
 	Date time.Time
 }
+
+type Photo struct {
+    Path      string
+    SourceURL string
+    AddedAt   time.Time
+}
+
+func (p Photo) IsZero() bool { return p.Path == "" }
